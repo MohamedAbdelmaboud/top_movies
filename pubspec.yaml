@@ -34,8 +34,10 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_hooks: ^0.20.5
+  flutter_svg: ^2.0.10+1
   gap: ^3.0.1
   go_router: ^14.2.7
+  loading_animation_widget: ^1.2.1
 
 dev_dependencies:
   flutter_launcher_icons: ^0.13.1
@@ -83,3 +85,7 @@ flutter_launcher_icons:
   android: "launcher_icon"
   ios: true
   image_path: "assets/images/app_logo.png"
+flutter_assets:
+  assets_path: assets/images/
+  output_path: lib/core/utils/
+  filename: app_images.dart
