@@ -1,4 +1,5 @@
 import 'package:go_router/go_router.dart';
+import 'package:top_movies/modules/auth/view/login_view.dart';
 import 'package:top_movies/modules/splash/presentation/views/splash_view.dart';
 
 class AppRouter {
@@ -13,6 +14,10 @@ class AppRouter {
         path: splah,
         builder: (context, state) => const SplashView(),
       ),
+      GoRoute(
+        path: login,
+        builder: (context, state) => const LoginView(),
+      )
     ],
   );
 }
