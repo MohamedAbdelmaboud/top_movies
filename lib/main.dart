@@ -12,6 +12,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
+      theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white,
+      ),
+      
       routerConfig: AppRouter.router,
       title: 'Top Movies',
     );

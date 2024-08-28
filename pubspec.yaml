@@ -28,14 +28,17 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  animated_text_kit: ^4.2.2
   cupertino_icons: ^1.0.8
   flutter:
     sdk: flutter
+  flutter_hooks: ^0.20.5
+  gap: ^3.0.1
   go_router: ^14.2.7
 
 dev_dependencies:
-  flutter_lints: ^4.0.0
   flutter_launcher_icons: ^0.13.1
+  flutter_lints: ^4.0.0
 
   flutter_test:
     sdk: flutter
