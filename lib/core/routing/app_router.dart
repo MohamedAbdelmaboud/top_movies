@@ -1,5 +1,5 @@
 import 'package:go_router/go_router.dart';
-import 'package:top_movies/modules/splash/presentation/splash_view.dart';
+import 'package:top_movies/modules/splash/presentation/views/splash_view.dart';
 
 class AppRouter {
   static const String splah = '/';
