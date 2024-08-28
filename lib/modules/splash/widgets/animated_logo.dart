@@ -10,7 +10,7 @@ class AnimatedLogo extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final controller =
-        useAnimationController(duration: const Duration(milliseconds: 2000))
+        useAnimationController(duration: const Duration(milliseconds: 1500))
           ..repeat(reverse: true);
 
     final fadeAnimation =
@@ -21,7 +21,7 @@ class AnimatedLogo extends HookWidget {
     return AnimatedBuilder(
       animation: controller,
       child: Image.asset(
-        'assets/images/video.gif',
+        'assets/images/video2.gif',
         width: 100,
         height: 100,
         fit: BoxFit.fill,

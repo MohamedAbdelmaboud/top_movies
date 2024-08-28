@@ -12,10 +12,16 @@ class SplashViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         AnimatedLogo(),
         Gap(15),
-        AnimatedTitle(),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            AnimatedTitle(),
+          ],
+        ),
       ],
     );
   }

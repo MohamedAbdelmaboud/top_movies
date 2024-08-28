@@ -10,8 +10,9 @@ class AnimatedTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return DefaultTextStyle(
       style: const TextStyle(
+        fontFamily: 'Pacifico',
         color: Colors.black,
-        fontWeight: FontWeight.bold,
+        fontWeight: FontWeight.w600,
       ),
       child: AnimatedTextKit(
         animatedTexts: [

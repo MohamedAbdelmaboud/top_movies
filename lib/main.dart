@@ -1,8 +1,15 @@
+import 'package:device_preview/device_preview.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:top_movies/core/routing/app_router.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    DevicePreview(
+      builder: (context) => const MyApp(),
+      enabled: !kReleaseMode,
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -15,7 +22,6 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: Colors.white,
       ),
-      
       routerConfig: AppRouter.router,
       title: 'Top Movies',
     );
