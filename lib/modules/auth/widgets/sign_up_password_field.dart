@@ -14,7 +14,7 @@ class SignUpPasswordField extends HookWidget {
     final isVisible = useState<bool>(true);
 
     return CustomTextFormField(
-      labeltext: 'كلمة المرور',
+      hintText: 'كلمة المرور',
       obscureText: isVisible.value,
       validator: ValidatorHelper.validatePassword,
       keyboardType: TextInputType.visiblePassword,

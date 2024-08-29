@@ -14,7 +14,7 @@ class LoginButton extends StatelessWidget {
       onPressed: () {
         // SignInCubit.get(context).signInWithEmailAndPassword();
       },
-      text: 'تسجيل الدخول',
+      text: 'Login',
     );
   }
 }

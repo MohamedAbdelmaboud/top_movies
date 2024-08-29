@@ -2,18 +2,22 @@ import 'package:flutter/material.dart';
 
 class AppStyles {
   static const _regular = TextStyle(
-    fontFamily: 'Ubuntu',
+    fontFamily: 'Montserrat',
     fontWeight: FontWeight.w400,
   );
 
   static const _semiBold = TextStyle(
-    fontFamily: 'Ubuntu',
+    fontFamily: 'Montserrat',
     fontWeight: FontWeight.w600,
+  );
+  static const _medium = TextStyle(
+    fontFamily: 'Montserrat',
+    fontWeight: FontWeight.w500,
   );
 
   static const _bold = TextStyle(
-    fontFamily: 'Ubuntu',
-    fontWeight: FontWeight.w700,
+    fontFamily: 'Montserrat',
+    fontWeight: FontWeight.w800,
   );
 
   static final TextStyle regular12 = _regular.copyWith(
@@ -25,6 +29,19 @@ class AppStyles {
     color: const Color(0xFFFFFFFF), // Changed to white
   );
   static final TextStyle regular16 = _regular.copyWith(
+    fontSize: 16,
+    color: const Color(0xFFFFFFFF), // Changed to white
+  );
+// medium
+  static final TextStyle medium12 = _medium.copyWith(
+    fontSize: 12,
+    color: const Color(0xFFFFFFFF), // Changed to white
+  );
+  static final TextStyle medium14 = _medium.copyWith(
+    fontSize: 14,
+    color: const Color(0xFFFFFFFF), // Changed to white
+  );
+  static final TextStyle medium16 = _medium.copyWith(
     fontSize: 16,
     color: const Color(0xFFFFFFFF), // Changed to white
   );

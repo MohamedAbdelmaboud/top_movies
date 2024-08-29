@@ -12,7 +12,7 @@ class ConfirmPasswordField extends HookWidget {
   Widget build(BuildContext context) {
     final isVisible = useState<bool>(true);
     return CustomTextFormField(
-      labeltext: 'تأكيد كلمة المرور',
+      hintText: 'تأكيد كلمة المرور',
       obscureText: isVisible.value,
       keyboardType: TextInputType.visiblePassword,
       suffixIcon: GestureDetector(

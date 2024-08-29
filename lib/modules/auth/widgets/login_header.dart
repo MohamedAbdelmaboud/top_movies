@@ -18,7 +18,7 @@ class LoginHeader extends StatelessWidget {
             Assets.assetsImagesAppLogo,
             height: 100,
           ),
-          const Gap(10),
+          const Gap(15),
           const HeaderTitle(
             fontSize: 14,
           ),

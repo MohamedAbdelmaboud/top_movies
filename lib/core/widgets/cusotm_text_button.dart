@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:top_movies/core/utils/app_colors.dart';
 
 import '../utils/app_styles.dart';
 
@@ -17,8 +18,8 @@ class CusotmTextButton extends StatelessWidget {
       onTap: onTap,
       child: Text(
         text,
-        style: AppStyles.semiBold13.copyWith(
-          color: const Color(0xff2D9F5D),
+        style: AppStyles.semiBold12.copyWith(
+          color: AppColors.primaryColor,
         ),
       ),
     );

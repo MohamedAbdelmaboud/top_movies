@@ -12,7 +12,7 @@ class NewPasswordField extends HookWidget {
   Widget build(BuildContext context) {
     final isVisible = useState<bool>(true);
     return CustomTextFormField(
-      labeltext: 'كلمة المرور',
+      hintText: 'كلمة المرور',
       obscureText: isVisible.value,
       keyboardType: TextInputType.visiblePassword,
       suffixIcon: GestureDetector(

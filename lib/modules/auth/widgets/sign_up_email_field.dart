@@ -11,7 +11,7 @@ class SignUpEmailField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomTextFormField(
-      labeltext: 'البريد الإلكتروني',
+      hintText: 'البريد الإلكتروني',
       keyboardType: TextInputType.emailAddress,
       validator: ValidatorHelper.validateEmail,
       onSaved: (value) {

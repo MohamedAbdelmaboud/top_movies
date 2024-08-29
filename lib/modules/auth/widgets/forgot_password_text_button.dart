@@ -12,7 +12,7 @@ class ForgotPasswordTextButton extends StatelessWidget {
     return Align(
       alignment: Alignment.centerRight,
       child: CusotmTextButton(
-        text: 'نسيت كلمة المرور؟',
+        text: 'Forgot password?',
         onTap: () {
           // context.push(AppRouter.forgetPasword);
         },

@@ -6,7 +6,7 @@ import '../../../../core/utils/app_styles.dart';
 class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField({
     super.key,
-    this.labeltext,
+    this.hintText,
     this.suffixIcon,
     this.keyboardType,
     this.obscureText = false,
@@ -16,7 +16,7 @@ class CustomTextFormField extends StatelessWidget {
   });
   final void Function(String value)? onChanged;
   final void Function(String? value)? onSaved;
-  final String? labeltext;
+  final String? hintText;
   final Widget? suffixIcon;
   final TextInputType? keyboardType;
   final bool obscureText;
@@ -33,12 +33,12 @@ class CustomTextFormField extends StatelessWidget {
       validator: validator,
       decoration: InputDecoration(
         filled: true,
-        fillColor: const Color(0XFFF9FAFA),
+        fillColor: AppColors.scaffoldBg,
         border: _buildBorder(),
         enabledBorder: _buildBorder(),
         focusedBorder: _buildBorder(),
-        labelText: labeltext,
-        labelStyle: AppStyles.bold13,
+        hintText: hintText,
+        hintStyle: AppStyles.medium12,
         suffixIcon: suffixIcon,
       ),
     );
@@ -50,8 +50,8 @@ class CustomTextFormField extends StatelessWidget {
         Radius.circular(4),
       ),
       borderSide: BorderSide(
-        width: 1.2,
-        color: Color(0XFFE6E9EA),
+        width: 1.1,
+        color: AppColors.greyColor,
       ),
     );
   }

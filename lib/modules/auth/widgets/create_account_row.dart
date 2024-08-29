@@ -12,8 +12,8 @@ class CreateAccountNow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextWithButtonRow(
-      text: 'ليس لديك حساب؟',
-      textButton: 'إنشاء حساب جديد',
+      text: 'Don\'t have an account?',
+      textButton: 'Sign up now',
       onTap: () {
         context.push(AppRouter.register);
       },

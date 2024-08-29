@@ -10,7 +10,7 @@ class ResetPasswordTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const CustomTextFormField(
-      labeltext: 'رقم الهاتف',
+      hintText: 'رقم الهاتف',
       keyboardType: TextInputType.phone,
     );
   }
