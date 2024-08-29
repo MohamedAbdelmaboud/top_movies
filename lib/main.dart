@@ -2,6 +2,7 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:top_movies/core/routing/app_router.dart';
+import 'package:top_movies/core/utils/app_colors.dart';
 
 void main() {
   runApp(
@@ -19,9 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      theme: ThemeData(
-        scaffoldBackgroundColor: Colors.white,
-      ),
+      theme: ThemeData(scaffoldBackgroundColor: AppColors.scaffoldBg),
       routerConfig: AppRouter.router,
       title: 'Top Movies',
     );

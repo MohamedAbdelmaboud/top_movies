@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
+import 'package:top_movies/modules/auth/widgets/header_title.dart';
 
-import 'page_view_item_title.dart';
+import '../../../core/utils/app_images.dart';
 
 class LoginHeader extends StatelessWidget {
   const LoginHeader({
@@ -11,17 +11,19 @@ class LoginHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        SvgPicture.asset(
-          'assets/images/app_logo.png',
-          height: 100,
-        ),
-        const Gap(10),
-        const PageViewItemTitle1(
-          fontSize: 14,
-        ),
-      ],
+    return SafeArea(
+      child: Column(
+        children: [
+          Image.asset(
+            Assets.assetsImagesAppLogo,
+            height: 100,
+          ),
+          const Gap(10),
+          const HeaderTitle(
+            fontSize: 14,
+          ),
+        ],
+      ),
     );
   }
 }

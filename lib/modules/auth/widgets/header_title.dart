@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:top_movies/core/utils/app_colors.dart';
+import 'package:top_movies/core/utils/app_styles.dart';
 
-import '../../../../core/utils/app_colors.dart';
-import '../../../../core/utils/app_styles.dart';
-
-class PageViewItemTitle1 extends StatelessWidget {
-  const PageViewItemTitle1({
+class HeaderTitle extends StatelessWidget {
+  const HeaderTitle({
     super.key,
     this.fontSize,
   });
@@ -16,23 +15,23 @@ class PageViewItemTitle1 extends StatelessWidget {
       TextSpan(
         children: [
           TextSpan(
-            text: 'مرحبًا بك في',
+            text: 'Welcome to',
             style: AppStyles.bold23.copyWith(
               fontSize: fontSize,
             ),
           ),
           TextSpan(
-            text: ' Fruit',
+            text: ' TOP',
             style: AppStyles.bold23.copyWith(
               fontSize: fontSize,
               color: AppColors.primaryColor,
             ),
           ),
           TextSpan(
-            text: 'HUB',
+            text: 'MOVIES',
             style: AppStyles.bold23.copyWith(
               fontSize: fontSize,
-              color: const Color(0xFFF4A91F),
+              color: const Color.fromARGB(255, 244, 45, 31),
             ),
           ),
         ],
