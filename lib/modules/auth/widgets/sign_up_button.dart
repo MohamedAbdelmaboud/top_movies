@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 
 import '../../../../core/widgets/custom_button.dart';
@@ -15,9 +17,10 @@ class SignUpButton extends StatelessWidget {
     return CustomButton(
       isButtonEnabled: isChecked.value,
       // isLoading: SignUpCubit.get(context).state is SignUpLoading,
-      text: 'إنشاء حساب جديد',
+      text: 'Sign Up',
+
       onPressed: () {
-        print('sign up');
+        log('sign up');
         // SignUpCubit.get(context).signUpWithEmailAndPassword();
       },
     );

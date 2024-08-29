@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:top_movies/core/utils/app_colors.dart';
 
 import '../../../../core/utils/app_styles.dart';
 
@@ -18,15 +19,15 @@ class TermsAndConditionsText extends StatelessWidget {
         TextSpan(
           children: [
             TextSpan(
-              text: 'من خلال إنشاء حساب ، فإنك توافق على ',
+              text: 'By creating an account, you agree to our ',
               style: AppStyles.semiBold13.copyWith(
-                color: const Color(0xff949D9E),
+                color: AppColors.greyColor,
               ),
             ),
             TextSpan(
-              text: 'الشروط والأحكام الخاصة بنا',
+              text: 'Terms and Conditions',
               style: AppStyles.semiBold13.copyWith(
-                color: const Color(0xff2D9F5D),
+                color: AppColors.primaryColor,
               ),
             )
           ],

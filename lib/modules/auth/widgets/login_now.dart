@@ -11,8 +11,10 @@ class LoginNow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextWithButtonRow(
-      text: 'تمتلك حساب بالفعل؟',
-      textButton: 'تسجيل دخول',
+      text: 'Already have an account?',
+      
+      textButton: 'Login now',
+      
       onTap: () {
         context.pop();
       },
