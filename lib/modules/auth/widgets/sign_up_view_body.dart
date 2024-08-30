@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:gap/gap.dart';
 import 'package:top_movies/core/utils/app_images.dart';
+import 'package:top_movies/modules/auth/widgets/sign_up_header.dart';
 
-import '../../../core/utils/app_styles.dart';
 import 'login_now.dart';
 import 'name_field.dart';
 import 'sign_up_button.dart';
@@ -55,37 +55,6 @@ class SignUpViewBody extends HookWidget {
           ],
         ),
       ),
-    );
-  }
-}
-
-class SignUpHeader extends StatelessWidget {
-  const SignUpHeader({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Text.rich(
-      TextSpan(
-        children: [
-          TextSpan(
-            text: 'Create an ',
-            style: AppStyles.bold23.copyWith(
-              fontSize: 16,
-              color: const Color(0xffffffff),
-            ),
-          ),
-          TextSpan(
-            text: 'account',
-            style: AppStyles.bold23.copyWith(
-              fontSize: 16,
-              color: const Color(0xff00eaff),
-            ),
-          ),
-        ],
-      ),
-      textAlign: TextAlign.center,
     );
   }
 }
