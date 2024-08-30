@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:gap/gap.dart';
-import 'package:lottie/lottie.dart';
 import 'package:top_movies/core/utils/app_images.dart';
 
 import '../../../core/utils/app_styles.dart';
@@ -29,17 +28,12 @@ class SignUpViewBody extends HookWidget {
         // key: SignUpCubit.get(context).formKey,
         // autovalidateMode: SignUpCubit.get(context).autovalidateMode,
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Lottie.asset(
-              Assets.assetsImagesSignUpAnimation,
-              height: 200,
-              width: 200,
+            Image.asset(
+              Assets.assetsImagesAppLogo,
+              height: 100,
             ),
-            // Image.asset(
-            //   Assets.assetsImagesSignUp2,
-            //   height: 200,
-            //   width: 200,
-            // ),
             const Gap(10),
             const SignUpHeader(),
             const Gap(24),
