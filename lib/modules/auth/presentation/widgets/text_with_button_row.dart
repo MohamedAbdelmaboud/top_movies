@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:top_movies/core/utils/app_colors.dart';
 
-import '../../../../core/utils/app_styles.dart';
-import '../../../../core/widgets/cusotm_text_button.dart';
+import '../../../../../core/utils/app_styles.dart';
+import '../../../../../core/widgets/cusotm_text_button.dart';
 
 class TextWithButtonRow extends StatelessWidget {
   const TextWithButtonRow({

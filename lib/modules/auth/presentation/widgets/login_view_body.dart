@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:top_movies/modules/auth/widgets/social_buttons.dart';
+import 'package:top_movies/modules/auth/presentation/widgets/social_buttons.dart';
 
 import 'create_account_row.dart';
 import 'forgot_password_text_button.dart';

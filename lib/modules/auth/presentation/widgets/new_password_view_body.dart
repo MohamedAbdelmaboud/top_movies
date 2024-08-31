@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
-import '../../../../core/utils/app_styles.dart';
-import '../../../../core/widgets/custom_button.dart';
+import '../../../../../core/utils/app_styles.dart';
+import '../../../../../core/widgets/custom_button.dart';
 import 'confirm_password_field.dart';
 import 'dialog_body.dart';
 import 'new_password_field.dart';

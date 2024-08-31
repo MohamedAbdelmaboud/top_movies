@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:top_movies/modules/splash/widgets/splash_view_body.dart';
+import 'package:top_movies/modules/splash/presentation/widgets/splash_view_body.dart';
 
 import '../../../../core/routing/app_router.dart';
 

@@ -1,8 +1,8 @@
 import 'package:go_router/go_router.dart';
-import 'package:top_movies/modules/auth/view/login_view.dart';
+import 'package:top_movies/modules/auth/presentation/view/login_view.dart';
 import 'package:top_movies/modules/splash/presentation/views/splash_view.dart';
 
-import '../../modules/auth/view/sign_up_view.dart';
+import '../../modules/auth/presentation/view/sign_up_view.dart';
 
 class AppRouter {
   static const String splah = '/';

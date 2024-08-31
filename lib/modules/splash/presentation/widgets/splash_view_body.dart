@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:top_movies/modules/splash/widgets/animated_title.dart';
+import 'package:top_movies/modules/splash/presentation/widgets/animated_title.dart';
 
 import 'animated_logo.dart';
 

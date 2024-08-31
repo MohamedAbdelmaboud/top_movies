@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/widgets/cusotm_text_button.dart';
+import '../../../../../core/widgets/cusotm_text_button.dart';
 
 class ForgotPasswordTextButton extends StatelessWidget {
   const ForgotPasswordTextButton({

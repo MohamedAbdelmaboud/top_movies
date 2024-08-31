@@ -2,7 +2,7 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 
-import '../../../../core/widgets/custom_button.dart';
+import '../../../../../core/widgets/custom_button.dart';
 
 class SignUpButton extends StatelessWidget {
   const SignUpButton({

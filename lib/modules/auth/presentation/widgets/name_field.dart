@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:top_movies/modules/auth/widgets/login_email_field.dart';
+import 'package:top_movies/modules/auth/presentation/widgets/login_email_field.dart';
 
-import '../../../../core/utils/validator_helper.dart';
+import '../../../../../core/utils/validator_helper.dart';
 import 'custom_text_form_field.dart';
 
 class NameField extends StatelessWidget {

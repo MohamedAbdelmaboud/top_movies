@@ -22,35 +22,7 @@ class Movie extends Equatable {
     required this.voteAverage,
     required this.voteCount,
   });
-  // factory constructor
-  factory Movie.fromJson(Map<String, dynamic> json) {
-    return Movie(
-      backdropPath: json['backdrop_path'],
-      genreIds: List<int>.from(json['genre_ids']),
-      id: json['id'],
-      overview: json['overview'],
-      posterPath: json['poster_path'],
-      releaseDate: json['release_date'],
-      title: json['title'],
-      voteAverage: json['vote_average'].toDouble(),
-      voteCount: json['vote_count'],
-    );
-  }
-  // toJson method
-  Map<String, dynamic> toJson() {
-    return {
-      'backdrop_path': backdropPath,
-      'genre_ids': genreIds,
-      'id': id,
-      'overview': overview,
-      'poster_path': posterPath,
-      'release_date': releaseDate,
-      'title': title,
-      'vote_average': voteAverage,
-      'vote_count': voteCount,
-    };
-  }
-
+  
   @override
   List<Object?> get props => [
         backdropPath,

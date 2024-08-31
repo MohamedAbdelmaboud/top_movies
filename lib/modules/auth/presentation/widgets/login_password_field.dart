@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:gap/gap.dart';
 
-import '../../../../core/utils/validator_helper.dart';
+import '../../../../../core/utils/validator_helper.dart';
 import 'custom_text_form_field.dart';
 import 'login_email_field.dart';
 
