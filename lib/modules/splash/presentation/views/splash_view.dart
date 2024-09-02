@@ -31,7 +31,7 @@ class _SplashViewState extends State<SplashView> {
   void navigateToNextPage() {
     Timer(const Duration(seconds: 3), () {
       context.go(
-        AppRouter.login,
+        AppRouter.onboarding,
       );
     });
   }
