@@ -15,7 +15,7 @@ class OnboardingTitleWidget extends StatelessWidget {
       children: [
         FlickerNeonText(
           text: "Your Movie Universe",
-          flickerTimeInMilliSeconds: 400,
+          flickerTimeInMilliSeconds: 600,
           fontFamily: 'Montserrat',
           fontWeight: FontWeight.w800,
           spreadColor: AppColors.primaryColor,

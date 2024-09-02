@@ -16,7 +16,7 @@ class WelcomeButtonWidget extends StatelessWidget {
         spreadColor: AppColors.primaryColor,
         borderRadius: BorderRadius.circular(100),
         lightBlurRadius: 100,
-        lightSpreadRadius: 30,
+        lightSpreadRadius: 25,
         borderWidth: 2,
         borderColor: Colors.green.shade100,
         child: CircumscribingIconButton(
