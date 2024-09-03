@@ -4,35 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:top_movies/core/routing/app_router.dart';
 import 'package:top_movies/core/utils/app_colors.dart';
 
-import 'modules/movies/domain/entites/movie.dart';
+import 'core/utils/service_locator.dart';
 
 void main() {
-  Movie movie1 = Movie(
-    backdropPath: 'backdropPath',
-    genreIds: [1, 2, 3], // const required
-
-    id: 1,
-    overview: 'overview',
-    posterPath: 'posterPath',
-    releaseDate: 'releaseDate',
-    title: 'title',
-    voteAverage: 4.5,
-    voteCount: 100,
-  );
-
-  Movie movie2 = Movie(
-    backdropPath: 'backdropPath',
-    genreIds: [1, 2, 3], // const required
-    id: 1,
-    overview: 'overview',
-    posterPath: 'posterPath',
-    releaseDate: 'releaseDate',
-    title: 'title',
-    voteAverage: 4.5,
-    voteCount: 100,
-  );
-  debugPrint((movie1 == movie2).toString());
-  print(movie1.hashCode);
+  setup();
   runApp(
     DevicePreview(
       builder: (context) => const MyApp(),

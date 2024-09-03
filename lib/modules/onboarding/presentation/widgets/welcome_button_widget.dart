@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:neon_widgets/neon_widgets.dart';
 import 'package:top_movies/core/routing/app_router.dart';
 import 'package:top_movies/core/utils/app_colors.dart';
+import 'package:top_movies/core/utils/app_styles.dart';
 
 class WelcomeButtonWidget extends StatelessWidget {
   const WelcomeButtonWidget({
@@ -11,22 +12,44 @@ class WelcomeButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return NeonContainer(
-        margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
-        spreadColor: AppColors.primaryColor,
-        borderRadius: BorderRadius.circular(100),
-        lightBlurRadius: 100,
-        lightSpreadRadius: 25,
-        borderWidth: 2,
-        borderColor: Colors.green.shade100,
-        child: CircumscribingIconButton(
-          icon: Icons.arrow_right_alt_sharp,
-          onTap: () {
-            context.go(
-              AppRouter.login,
-            );
-          },
-          backgroundColor: AppColors.primaryColor,
-        ));
+    return ShaderMask(
+      shaderCallback: (rect) {
+        return const LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [
+            // fromLTRB
+            Colors.black,
+            Colors.black,
+            Colors.black,
+            Colors.transparent,
+          ],
+          stops: [0, 0.3, 0.9, 1],
+        ).createShader(
+          Rect.fromLTRB(0, 0, rect.width, rect.height),
+        );
+      },
+      blendMode: BlendMode.dstIn,
+      child: Padding(
+        padding: const EdgeInsets.all(15.0),
+        child: SizedBox(
+          height: 50,
+          child: NeonContainer(
+            spreadColor: AppColors.primaryColor,
+            borderWidth: 2,
+            child: TextButton(
+                onPressed: () {
+                  GoRouter.of(context).go(AppRouter.login);
+                },
+                child: Text(
+                  'Welcome',
+                  style: AppStyles.bold19.copyWith(
+                    fontFamily: 'Pacifico',
+                  ),
+                )),
+          ),
+        ),
+      ),
+    );
   }
 }

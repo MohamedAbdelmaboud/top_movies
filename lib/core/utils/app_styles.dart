@@ -45,6 +45,10 @@ class AppStyles {
     fontSize: 16,
     color: const Color(0xFFFFFFFF), // Changed to white
   );
+  static final TextStyle medium19 = _medium.copyWith(
+    fontSize: 19,
+    color: const Color(0xFFFFFFFF), // Changed to white
+  );
 
   static final TextStyle semiBold11 = _semiBold.copyWith(
     fontSize: 11,

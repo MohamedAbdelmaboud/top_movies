@@ -10,3 +10,5 @@ String popularMovies = getEndpoint('movie/popular');
 String searchMovies = getEndpoint('search/movie');
 String nowPlayingMovies = getEndpoint('movie/now_playing');
 String topRatedMovies = getEndpoint('movie/top_rated');
+
+String getImageUrl(String path) => 'https://image.tmdb.org/t/p/w500$path';
