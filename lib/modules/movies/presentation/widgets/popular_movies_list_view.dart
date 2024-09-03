@@ -1,8 +1,8 @@
-import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
-import 'package:top_movies/core/test/dummy.dart';
-import 'package:top_movies/modules/movies/presentation/widgets/movie_item.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:top_movies/modules/movies/presentation/controller/bloc/movies_bloc.dart';
+import 'package:top_movies/modules/movies/presentation/widgets/popular_movies_loaded.dart';
+import 'package:top_movies/modules/movies/presentation/widgets/popular_movies_loading.dart';
 
 class PopularMoviesListView extends StatelessWidget {
   const PopularMoviesListView({
@@ -11,26 +11,20 @@ class PopularMoviesListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return FadeIn(
-      duration: const Duration(milliseconds: 500),
-      child: SizedBox(
-        height: 170.0,
-        child: ListView.separated(
-          separatorBuilder: (context, index) => const Gap(12),
-          scrollDirection: Axis.horizontal,
-          padding: const EdgeInsets.symmetric(horizontal: 16.0),
-          itemCount: moviesList.length,
-          itemBuilder: (context, index) {
-            final movie = moviesList[index];
-            return InkWell(
-              onTap: () {
-                /// TODO : NAVIGATE TO  MOVIE DETAILS
-              },
-              child: MovieItem(movie: movie),
+    return BlocBuilder<MoviesBloc, MoviesState>(
+      builder: (context, state) {
+        final moviesList = state.popularMovies;
+        switch (state.popularStatus) {
+          case MoviesStatus.loading:
+            return PopularMoviesLoading();
+          case MoviesStatus.error:
+            return Center(
+              child: Text(state.popularErrorMessage),
             );
-          },
-        ),
-      ),
+          case MoviesStatus.loaded:
+            return PopularMoviesLoaded(moviesList: moviesList);
+        }
+      },
     );
   }
 }

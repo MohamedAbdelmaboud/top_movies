@@ -8,6 +8,8 @@ import 'package:top_movies/modules/onboarding/presentation/views/onboarding_view
 import 'package:top_movies/modules/splash/presentation/views/splash_view.dart';
 
 import '../../modules/auth/presentation/view/sign_up_view.dart';
+import '../../modules/movies/domain/usecases/get_popular_movies_use_case.dart';
+import '../../modules/movies/domain/usecases/get_top_rated_movies_use_case.dart';
 import '../../modules/movies/presentation/controller/bloc/movies_bloc.dart';
 
 class AppRouter {
@@ -40,8 +42,17 @@ class AppRouter {
         builder: (context, state) => BlocProvider(
           create: (context) => MoviesBloc(
             getIt<GetNowPlayingMoviesUseCase>(),
-          )..add(
+            getIt<GetPopularMoviesUseCase>(),
+            getIt<GetTopRatedMoviesUseCase>(),
+          )
+            ..add(
               GetNowPlayingMoviesEvent(),
+            )
+            ..add(
+              GetPopularMoviesEvent(),
+            )
+            ..add(
+              GetTopRatedMoviesEvent(),
             ),
           child: const HomeView(),
         ),

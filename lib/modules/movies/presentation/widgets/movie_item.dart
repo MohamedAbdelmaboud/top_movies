@@ -21,7 +21,7 @@ class MovieItem extends StatelessWidget {
       child: CachedNetworkImage(
         width: 130.0,
         fit: BoxFit.cover,
-        imageUrl: getImageUrl(movie.backdropPath),
+        imageUrl: getImageUrl(movie.posterPath),
         placeholder: (context, url) => const MovieLoadingShimmer(),
         errorWidget: (context, url, error) => const Icon(Icons.error),
       ),

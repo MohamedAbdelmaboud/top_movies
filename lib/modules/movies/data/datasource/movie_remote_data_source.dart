@@ -40,7 +40,7 @@ class MovieRemoteDataSource implements BaseRemoteDataSource {
       Response response = await dio.get(
         popularMovies,
       );
-      List<Map<String, dynamic>> json = response.data['results'];
+        List<dynamic> json = response.data['results'];
       List<MovieModel> movies = List.generate(
         json.length,
         (index) => MovieModel.fromJson(json[index]),
@@ -57,7 +57,7 @@ class MovieRemoteDataSource implements BaseRemoteDataSource {
       Response response = await dio.get(
         topRatedMovies,
       );
-      List<Map<String, dynamic>> json = response.data['results'];
+      List<dynamic> json = response.data['results'];
       List<MovieModel> movies = List.generate(
         json.length,
         (index) => MovieModel.fromJson(json[index]),

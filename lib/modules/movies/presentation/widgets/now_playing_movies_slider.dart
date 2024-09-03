@@ -15,14 +15,14 @@ class NowPlayingMoviesSlider extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<MoviesBloc, MoviesState>(
       builder: (context, state) {
-        final moviesList = state.movies;
+        final moviesList = state.nowPlayingMovies;
 
-        switch (state.status) {
+        switch (state.nowPlayingstatus) {
           case MoviesStatus.loading:
             return const MoviesLoadingSlider();
           case MoviesStatus.error:
             return Center(
-              child: Text(state.errorMessage),
+              child: Text(state.nowPlayingErrorMessage),
             );
           case MoviesStatus.loaded:
             if (moviesList.isNotEmpty) {
