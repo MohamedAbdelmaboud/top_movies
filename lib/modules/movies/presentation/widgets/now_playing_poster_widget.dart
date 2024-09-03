@@ -20,8 +20,8 @@ class NowPlayingPosterWidget extends StatelessWidget {
           children: [
             Icon(
               Icons.circle,
-              color: Colors.redAccent,
-              size: 16.0,
+              color: Colors.red,
+              size: 18.0,
             ),
             Gap(4),
             FlickerNeonText(
@@ -30,7 +30,7 @@ class NowPlayingPosterWidget extends StatelessWidget {
               fontFamily: 'Montserrat',
               fontWeight: FontWeight.bold,
               spreadColor: Colors.red,
-              blurRadius: 40,
+              blurRadius: 25,
               textSize: 16,
               letterSpacing: 5,
             ),

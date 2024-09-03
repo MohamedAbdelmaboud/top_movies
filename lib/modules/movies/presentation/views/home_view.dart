@@ -17,7 +17,7 @@ class HomeView extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              NowPlayingMoviesSlider(),
+              NowPlayingMoviesSlider(), // done
               PopularMoviesRow(),
               PopularMoviesListView(),
               TopRatedMoviesRow(),

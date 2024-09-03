@@ -22,7 +22,9 @@ class CustomButton extends StatelessWidget {
     return GestureDetector(
       onTap: isButtonEnabled ? onPressed : null,
       child: Container(
-        height: 50,
+        clipBehavior: Clip.none,
+
+        height: 54, // decrease the height to 55 or font size to 16
         decoration: BoxDecoration(
           gradient: const LinearGradient(
             colors: [

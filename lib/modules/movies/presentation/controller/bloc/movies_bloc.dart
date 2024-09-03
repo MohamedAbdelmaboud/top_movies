@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:top_movies/modules/movies/domain/usecases/get_now_playing_movies_use_case.dart';
@@ -13,7 +15,8 @@ class MoviesBloc extends Bloc<MoviesEvent, MoviesState> {
     on<GetNowPlayingMoviesEvent>((event, emit) async {
       final result = await getNowPlayingMoviesUseCase.excute();
 
-      print(result);
+      log(result.toString());
+        
       result.fold(
         (failure) => emit(
           MoviesState(
@@ -30,4 +33,5 @@ class MoviesBloc extends Bloc<MoviesEvent, MoviesState> {
       );
     });
   }
+
 }
