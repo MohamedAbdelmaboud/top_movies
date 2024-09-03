@@ -1,5 +1,7 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:top_movies/core/utils/app_colors.dart';
 import 'package:top_movies/core/utils/app_styles.dart';
 
 class SeeMoreWidget extends StatelessWidget {
@@ -16,15 +18,20 @@ class SeeMoreWidget extends StatelessWidget {
         children: [
           Text(
             'See More',
-            style: AppStyles.medium14.copyWith(
+            style: AppStyles.bold13.copyWith(
               letterSpacing: 0.15,
+              color: AppColors.primaryColor,
             ),
           ),
-          const Gap(5),
-          const Icon(
-            Icons.arrow_forward_ios,
-            size: 12.0,
-            color: Colors.white,
+          const Gap(2),
+          Flash(
+            infinite: true,
+            child: const Icon(
+              Icons.arrow_forward_ios,
+              size: 14.0,
+              color: AppColors.primaryColor,
+            
+            ),
           )
         ],
       ),

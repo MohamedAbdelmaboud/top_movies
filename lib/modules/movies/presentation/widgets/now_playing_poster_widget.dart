@@ -1,6 +1,8 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:neon_widgets/neon_widgets.dart';
+import 'package:top_movies/modules/movies/presentation/widgets/now_playing_icon.dart';
+import 'package:top_movies/modules/movies/presentation/widgets/now_playing_poster_text.dart';
 
 class NowPlayingPosterWidget extends StatelessWidget {
   const NowPlayingPosterWidget({
@@ -9,31 +11,22 @@ class NowPlayingPosterWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Positioned(
+    return Positioned(
       bottom: -15,
       left: 0,
       right: 0,
       child: Padding(
-        padding: EdgeInsets.only(bottom: 16.0),
+        padding: const EdgeInsets.only(bottom: 16.0),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(
-              Icons.circle,
-              color: Colors.red,
-              size: 18.0,
+            ShakeX(
+              infinite: true,
+              duration: const Duration(milliseconds: 2000),
+              child: const NowPlayingIcon(),
             ),
-            Gap(4),
-            FlickerNeonText(
-              text: "NOW PLAYING",
-              flickerTimeInMilliSeconds: 800,
-              fontFamily: 'Montserrat',
-              fontWeight: FontWeight.bold,
-              spreadColor: Colors.red,
-              blurRadius: 25,
-              textSize: 16,
-              letterSpacing: 5,
-            ),
+            const Gap(4),
+            const NowPlayingPosterText(),
           ],
         ),
       ),
