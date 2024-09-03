@@ -12,7 +12,7 @@ class TilteTextWidet extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       title,
-      style: AppStyles.medium16.copyWith(
+      style: AppStyles.bold13.copyWith(
         letterSpacing: 0.15,
       ),
     );
