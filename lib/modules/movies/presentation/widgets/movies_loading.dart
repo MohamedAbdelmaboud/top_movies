@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:top_movies/modules/movies/presentation/widgets/movie_item_shimmer.dart';
 
-class PopularMoviesLoading extends StatelessWidget {
-  const PopularMoviesLoading({super.key});
+class MoviesLoading extends StatelessWidget {
+  const MoviesLoading({super.key});
 
   @override
   Widget build(BuildContext context) {

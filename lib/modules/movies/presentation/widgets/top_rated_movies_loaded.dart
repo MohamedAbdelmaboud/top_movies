@@ -4,8 +4,8 @@ import 'package:gap/gap.dart';
 import 'package:top_movies/modules/movies/domain/entites/movie.dart';
 import 'package:top_movies/modules/movies/presentation/widgets/movie_item.dart';
 
-class PopularMoviesLoaded extends StatelessWidget {
-  const PopularMoviesLoaded({
+class TopRatedMoviesLoaded extends StatelessWidget {
+  const TopRatedMoviesLoaded({
     super.key,
     required this.moviesList,
   });

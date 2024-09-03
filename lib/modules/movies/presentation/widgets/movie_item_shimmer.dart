@@ -14,7 +14,7 @@ class MovieItemShimmer extends StatelessWidget {
           color: Colors.grey,
           borderRadius: BorderRadius.circular(5),
         ),
-        width: 130.0,
+        width: 140.0,
       ),
     );
   }

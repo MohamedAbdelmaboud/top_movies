@@ -19,7 +19,7 @@ class MovieItem extends StatelessWidget {
         Radius.circular(8.0),
       ),
       child: CachedNetworkImage(
-        width: 130.0,
+        width: 140.0,
         fit: BoxFit.cover,
         imageUrl: getImageUrl(movie.posterPath),
         placeholder: (context, url) => const MovieLoadingShimmer(),
