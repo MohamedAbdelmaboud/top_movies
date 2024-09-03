@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 
-class LoadingShimmer extends StatelessWidget {
-  const LoadingShimmer({
+class MovieLoadingShimmer extends StatelessWidget {
+  const MovieLoadingShimmer({
     super.key,
   });
 

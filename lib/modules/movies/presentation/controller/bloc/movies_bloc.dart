@@ -11,11 +11,6 @@ class MoviesBloc extends Bloc<MoviesEvent, MoviesState> {
   final GetNowPlayingMoviesUseCase getNowPlayingMoviesUseCase;
   MoviesBloc(this.getNowPlayingMoviesUseCase) : super(const MoviesState()) {
     on<GetNowPlayingMoviesEvent>((event, emit) async {
-      emit(
-        const MoviesState(
-          status: MoviesStatus.loading,
-        ),
-      );
       final result = await getNowPlayingMoviesUseCase.excute();
 
       print(result);

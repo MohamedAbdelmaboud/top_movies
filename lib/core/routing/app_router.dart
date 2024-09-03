@@ -38,7 +38,6 @@ class AppRouter {
       GoRoute(
         path: home,
         builder: (context, state) => BlocProvider(
-          lazy: false,
           create: (context) => MoviesBloc(
             getIt<GetNowPlayingMoviesUseCase>(),
           )..add(
