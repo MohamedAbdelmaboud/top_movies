@@ -18,7 +18,7 @@ class MovieUpcomingDate extends StatelessWidget {
       ),
       child: Text(
         'Jan 2024',
-        style: AppStyles.bold10,
+        style: AppStyles.bold9,
       ),
     );
   }

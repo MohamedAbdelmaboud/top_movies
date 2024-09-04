@@ -13,9 +13,10 @@ class MovieUpcomingItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return NeonContainer(
-      lightBlurRadius: 10,
+      margin: const EdgeInsets.symmetric(horizontal: 8),
+      lightBlurRadius: 8,
       lightSpreadRadius: 2,
-      spreadColor: AppColors.primaryColor.withOpacity(0.7),
+      spreadColor: AppColors.primaryColor.withOpacity(0.5),
       borderColor: AppColors.gradient1.withOpacity(0.7),
       borderWidth: 2,
       child: const Padding(

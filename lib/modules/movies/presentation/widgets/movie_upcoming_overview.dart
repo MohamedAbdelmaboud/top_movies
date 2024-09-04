@@ -10,7 +10,7 @@ class MovieUpcomingOverview extends StatelessWidget {
   Widget build(BuildContext context) {
     return ConstrainedBox(
       constraints: BoxConstraints(
-        maxWidth: MediaQuery.of(context).size.width * .65,
+        maxWidth: MediaQuery.of(context).size.width * .6,
       ),
       child: Text(
         'Doctor Strange, with the help of mystical allies both old and new, traverses the mind-bending and dangerous alternate realities of the Multiverse to confront a mysterious new adversary.',
