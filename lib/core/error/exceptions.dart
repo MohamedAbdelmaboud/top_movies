@@ -1,4 +1,4 @@
-import 'package:top_movies/core/error/error_message_model.dart';
+import 'error_message_model.dart';
 
 class CustomException implements Exception {
   final ErrorMessageModel errorMessageModel;

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:top_movies/core/utils/app_images.dart';
-import 'package:top_movies/modules/auth/presentation/widgets/svg_icon.dart';
+
+import '../../../../core/utils/app_images.dart';
+import 'svg_icon.dart';
 
 class SocialButtons extends StatelessWidget {
   const SocialButtons({

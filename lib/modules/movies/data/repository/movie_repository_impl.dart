@@ -1,8 +1,8 @@
 import 'package:dartz/dartz.dart';
-import 'package:top_movies/core/error/failures.dart';
-import 'package:top_movies/modules/movies/domain/entites/movie.dart';
-import 'package:top_movies/modules/movies/domain/repository/movie_repository.dart';
 
+import '../../../../core/error/failures.dart';
+import '../../domain/entites/movie.dart';
+import '../../domain/repository/movie_repository.dart';
 import '../datasource/movie_remote_data_source.dart';
 
 class MovieRepositoryImpl implements MovieRepository {

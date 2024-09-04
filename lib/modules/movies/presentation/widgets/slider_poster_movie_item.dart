@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:top_movies/modules/movies/presentation/widgets/custom_shader_mask.dart';
-import 'package:top_movies/modules/movies/presentation/widgets/now_playing_poster_widget.dart';
+
+import 'custom_shader_mask.dart';
+import 'now_playing_poster_widget.dart';
 
 class SliderPosterMovieItem extends StatelessWidget {
   const SliderPosterMovieItem({

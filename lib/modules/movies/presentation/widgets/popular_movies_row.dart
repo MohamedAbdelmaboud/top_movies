@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:top_movies/modules/movies/presentation/widgets/see_more_widget.dart';
-import 'package:top_movies/modules/movies/presentation/widgets/tilte_text_widet.dart';
+
+import 'see_more_widget.dart';
+import 'tilte_text_widet.dart';
 
 class PopularMoviesRow extends StatelessWidget {
   const PopularMoviesRow({

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:top_movies/core/utils/app_colors.dart';
 
+import '../utils/app_colors.dart';
 import '../utils/app_styles.dart';
 
 class CusotmTextButton extends StatelessWidget {

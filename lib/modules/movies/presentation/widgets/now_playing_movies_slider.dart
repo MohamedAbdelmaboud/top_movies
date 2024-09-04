@@ -1,10 +1,11 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:top_movies/core/utils/app_styles.dart';
-import 'package:top_movies/modules/movies/presentation/controller/bloc/movies_bloc.dart';
-import 'package:top_movies/modules/movies/presentation/widgets/movies_loaded_slider.dart';
-import 'package:top_movies/modules/movies/presentation/widgets/movies_loading_slider.dart';
+
+import '../../../../core/utils/app_styles.dart';
+import '../controller/bloc/movies_bloc.dart';
+import 'movies_loaded_slider.dart';
+import 'movies_loading_slider.dart';
 
 class NowPlayingMoviesSlider extends StatelessWidget {
   const NowPlayingMoviesSlider({

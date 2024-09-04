@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:top_movies/modules/movies/presentation/widgets/poster_image_widget.dart';
+import 'poster_image_widget.dart';
 
 class CustomShaderMask extends StatelessWidget {
   const CustomShaderMask({

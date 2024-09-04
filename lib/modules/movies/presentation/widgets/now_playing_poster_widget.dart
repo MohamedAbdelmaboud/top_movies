@@ -1,8 +1,9 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:top_movies/modules/movies/presentation/widgets/now_playing_icon.dart';
-import 'package:top_movies/modules/movies/presentation/widgets/now_playing_poster_text.dart';
+
+import 'now_playing_icon.dart';
+import 'now_playing_poster_text.dart';
 
 class NowPlayingPosterWidget extends StatelessWidget {
   const NowPlayingPosterWidget({

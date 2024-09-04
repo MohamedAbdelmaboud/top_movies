@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:top_movies/core/utils/app_images.dart';
-import 'package:top_movies/modules/onboarding/presentation/widgets/onboarding_sub_title_widget.dart';
-import 'package:top_movies/modules/onboarding/presentation/widgets/onboarding_title_widget.dart';
-import 'package:top_movies/modules/onboarding/presentation/widgets/welcome_button_widget.dart';
+
+import '../../../../core/utils/app_images.dart';
+import 'onboarding_sub_title_widget.dart';
+import 'onboarding_title_widget.dart';
+import 'welcome_button_widget.dart';
 
 class OnboardingViewBody extends StatelessWidget {
   const OnboardingViewBody({

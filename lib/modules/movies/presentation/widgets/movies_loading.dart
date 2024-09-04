@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:top_movies/modules/movies/presentation/widgets/movie_item_shimmer.dart';
+
+import 'movie_item_shimmer.dart';
 
 class MoviesLoading extends StatelessWidget {
   const MoviesLoading({super.key});

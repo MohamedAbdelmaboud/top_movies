@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
-import 'package:top_movies/modules/movies/domain/entites/movie.dart';
 
 import '../../../../core/error/failures.dart';
+import '../entites/movie.dart';
 import '../repository/movie_repository.dart';
 
 class GetTopRatedMoviesUseCase {

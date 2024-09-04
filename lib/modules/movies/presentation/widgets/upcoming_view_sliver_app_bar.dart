@@ -1,8 +1,9 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-import 'package:top_movies/core/utils/app_colors.dart';
-import 'package:top_movies/core/utils/app_images.dart';
-import 'package:top_movies/modules/movies/presentation/widgets/upcoming_flicker_text.dart';
+
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_images.dart';
+import 'upcoming_flicker_text.dart';
 
 class UpcomingViewSliverAppBar extends StatelessWidget {
   const UpcomingViewSliverAppBar({

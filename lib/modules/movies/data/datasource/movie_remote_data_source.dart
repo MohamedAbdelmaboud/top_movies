@@ -1,8 +1,9 @@
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
-import 'package:top_movies/core/error/failures.dart';
-import 'package:top_movies/core/utils/app_constance.dart';
-import 'package:top_movies/modules/movies/data/models/movie_model.dart';
+
+import '../../../../core/error/failures.dart';
+import '../../../../core/utils/app_constance.dart';
+import '../models/movie_model.dart';
 
 abstract class BaseRemoteDataSource {
   Future<Either<Failure, List<MovieModel>>> getNowPlayingMovies();
@@ -40,7 +41,7 @@ class MovieRemoteDataSource implements BaseRemoteDataSource {
       Response response = await dio.get(
         popularMovies,
       );
-        List<dynamic> json = response.data['results'];
+      List<dynamic> json = response.data['results'];
       List<MovieModel> movies = List.generate(
         json.length,
         (index) => MovieModel.fromJson(json[index]),

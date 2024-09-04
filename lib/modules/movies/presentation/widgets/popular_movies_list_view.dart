@@ -1,8 +1,11 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:top_movies/modules/movies/presentation/controller/bloc/movies_bloc.dart';
-import 'package:top_movies/modules/movies/presentation/widgets/movies_loading.dart';
-import 'package:top_movies/modules/movies/presentation/widgets/popular_movies_loaded.dart';
+
+import '../controller/bloc/movies_bloc.dart';
+import 'movies_loading.dart';
+import 'popular_movies_loaded.dart';
 
 class PopularMoviesListView extends StatelessWidget {
   const PopularMoviesListView({
@@ -13,9 +16,8 @@ class PopularMoviesListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<MoviesBloc, MoviesState>(
       builder: (context, state) {
-        print('PopularMoviesListView build');
-        
-        
+        log('PopularMoviesListView build');
+
         final moviesList = state.popularMovies;
         switch (state.popularStatus) {
           case MoviesStatus.loading:

@@ -2,9 +2,9 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:top_movies/modules/splash/presentation/widgets/splash_view_body.dart';
 
 import '../../../../core/routing/app_router.dart';
+import '../widgets/splash_view_body.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});

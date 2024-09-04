@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:top_movies/modules/movies/presentation/widgets/movie_upcoming_date.dart';
-import 'package:top_movies/modules/movies/presentation/widgets/movie_upcoming_rate.dart';
+
+import 'movie_upcoming_date.dart';
+import 'movie_upcoming_rate.dart';
 
 class MovieUpcomingDateAndRate extends StatelessWidget {
   const MovieUpcomingDateAndRate({

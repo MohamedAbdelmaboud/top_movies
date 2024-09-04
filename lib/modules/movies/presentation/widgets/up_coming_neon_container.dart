@@ -2,9 +2,10 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:neon_widgets/neon_widgets.dart';
-import 'package:top_movies/core/routing/app_router.dart';
-import 'package:top_movies/core/utils/app_colors.dart';
-import 'package:top_movies/core/utils/app_styles.dart';
+
+import '../../../../core/routing/app_router.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_styles.dart';
 
 class UpComingNeonContainer extends StatelessWidget {
   const UpComingNeonContainer({

@@ -2,9 +2,9 @@ import 'dart:async';
 
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:top_movies/modules/movies/domain/usecases/get_now_playing_movies_use_case.dart';
-import 'package:top_movies/modules/movies/domain/usecases/get_popular_movies_use_case.dart';
-import 'package:top_movies/modules/movies/domain/usecases/get_top_rated_movies_use_case.dart';
+import '../../../domain/usecases/get_now_playing_movies_use_case.dart';
+import '../../../domain/usecases/get_popular_movies_use_case.dart';
+import '../../../domain/usecases/get_top_rated_movies_use_case.dart';
 
 import '../../../domain/entites/movie.dart';
 

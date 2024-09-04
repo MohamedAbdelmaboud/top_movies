@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:neon_widgets/neon_widgets.dart';
-import 'package:top_movies/core/utils/app_colors.dart';
-import 'package:top_movies/modules/movies/presentation/widgets/movie_upcoming_image.dart';
-import 'package:top_movies/modules/movies/presentation/widgets/movie_upcoming_right_side.dart';
+
+import '../../../../core/utils/app_colors.dart';
+import 'movie_upcoming_image.dart';
+import 'movie_upcoming_right_side.dart';
 
 class MovieUpcomingItem extends StatelessWidget {
   const MovieUpcomingItem({

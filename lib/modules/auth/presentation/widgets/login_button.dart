@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:top_movies/core/routing/app_router.dart';
 
 import '../../../../../core/widgets/custom_button.dart';
+import '../../../../core/routing/app_router.dart';
 
 class LoginButton extends StatelessWidget {
   const LoginButton({

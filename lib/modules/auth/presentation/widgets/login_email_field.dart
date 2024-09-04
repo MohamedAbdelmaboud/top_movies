@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:top_movies/core/utils/app_styles.dart';
 
+import '../../../../core/utils/app_styles.dart';
 import '../../../../core/utils/validator_helper.dart';
 import 'custom_text_form_field.dart';
 

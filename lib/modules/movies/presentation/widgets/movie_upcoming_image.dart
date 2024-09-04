@@ -1,7 +1,8 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:top_movies/core/utils/app_constance.dart';
-import 'package:top_movies/modules/movies/presentation/widgets/movie_loading_shimmer.dart';
+
+import '../../../../core/utils/app_constance.dart';
+import 'movie_loading_shimmer.dart';
 
 class MovieUpcomingImage extends StatelessWidget {
   const MovieUpcomingImage({

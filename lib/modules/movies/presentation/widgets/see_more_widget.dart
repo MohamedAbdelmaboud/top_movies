@@ -1,8 +1,9 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:top_movies/core/utils/app_colors.dart';
-import 'package:top_movies/core/utils/app_styles.dart';
+
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_styles.dart';
 
 class SeeMoreWidget extends StatelessWidget {
   const SeeMoreWidget({
@@ -30,7 +31,6 @@ class SeeMoreWidget extends StatelessWidget {
               Icons.arrow_forward_ios,
               size: 14.0,
               color: AppColors.primaryColor,
-            
             ),
           )
         ],

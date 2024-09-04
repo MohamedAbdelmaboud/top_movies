@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:top_movies/modules/auth/presentation/widgets/header_title.dart';
 
 import '../../../../core/utils/app_images.dart';
+import 'header_title.dart';
 
 class LoginHeader extends StatelessWidget {
   const LoginHeader({

@@ -1,8 +1,9 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:top_movies/modules/movies/domain/entites/movie.dart';
-import 'package:top_movies/modules/movies/presentation/widgets/movie_item.dart';
+
+import '../../domain/entites/movie.dart';
+import 'movie_item.dart';
 
 class TopRatedMoviesLoaded extends StatelessWidget {
   const TopRatedMoviesLoaded({

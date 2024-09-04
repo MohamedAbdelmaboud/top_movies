@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:top_movies/core/utils/app_colors.dart';
 
 import '../../../../../core/utils/app_styles.dart';
+import '../../../../core/utils/app_colors.dart';
 
 class TermsAndConditionsText extends StatelessWidget {
   const TermsAndConditionsText({

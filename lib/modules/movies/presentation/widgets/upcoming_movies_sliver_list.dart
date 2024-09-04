@@ -1,7 +1,8 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:top_movies/modules/movies/presentation/widgets/movie_upcoming_item.dart';
+
+import 'movie_upcoming_item.dart';
 
 class UpcomingMoviesSliverList extends StatelessWidget {
   const UpcomingMoviesSliverList({

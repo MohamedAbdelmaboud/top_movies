@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:neon_widgets/neon_widgets.dart';
-import 'package:top_movies/core/utils/app_colors.dart';
+
+import '../../../../core/utils/app_colors.dart';
 
 class OnboardingTitleWidget extends StatelessWidget {
   const OnboardingTitleWidget({

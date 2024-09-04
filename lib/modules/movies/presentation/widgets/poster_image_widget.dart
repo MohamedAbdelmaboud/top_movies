@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:top_movies/core/utils/app_constance.dart';
+
+import '../../../../core/utils/app_constance.dart';
 
 class PosterImageWidget extends StatelessWidget {
   const PosterImageWidget({
