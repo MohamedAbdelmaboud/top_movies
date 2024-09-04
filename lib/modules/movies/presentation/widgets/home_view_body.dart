@@ -18,7 +18,6 @@ class HomeViewBody extends StatelessWidget {
     return const SingleChildScrollView(
       key: Key('movieScrollView'),
       child: SafeArea(
-        top: false,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
