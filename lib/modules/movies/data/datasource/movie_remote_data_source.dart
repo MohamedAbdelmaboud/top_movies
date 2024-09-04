@@ -9,6 +9,7 @@ abstract class BaseRemoteDataSource {
   Future<Either<Failure, List<MovieModel>>> getNowPlayingMovies();
   Future<Either<Failure, List<MovieModel>>> getTopRatedMovies();
   Future<Either<Failure, List<MovieModel>>> getPopularMovies();
+  Future<Either<Failure, List<MovieModel>>> getUpcomingMovies();
 }
 
 class MovieRemoteDataSource implements BaseRemoteDataSource {
@@ -57,6 +58,23 @@ class MovieRemoteDataSource implements BaseRemoteDataSource {
     try {
       Response response = await dio.get(
         topRatedMovies,
+      );
+      List<dynamic> json = response.data['results'];
+      List<MovieModel> movies = List.generate(
+        json.length,
+        (index) => MovieModel.fromJson(json[index]),
+      );
+      return right(movies);
+    } on DioException catch (e) {
+      return left(ServerFailure.fromDioException(e));
+    }
+  }
+
+  @override
+  Future<Either<Failure, List<MovieModel>>> getUpcomingMovies() async {
+    try {
+      Response response = await dio.get(
+        upcomingMovies,
       );
       List<dynamic> json = response.data['results'];
       List<MovieModel> movies = List.generate(

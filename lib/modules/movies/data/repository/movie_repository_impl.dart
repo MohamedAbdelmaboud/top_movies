@@ -28,4 +28,10 @@ class MovieRepositoryImpl implements MovieRepository {
     final result = remoteDataSource.getTopRatedMovies();
     return result;
   }
+
+  @override
+  Future<Either<Failure, List<Movie>>> getUpcomingMovies() {
+    final result = remoteDataSource.getUpcomingMovies();
+    return result;
+  }
 }
