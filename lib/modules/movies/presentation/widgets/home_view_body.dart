@@ -23,7 +23,7 @@ class HomeViewBody extends StatelessWidget {
           children: [
             NowPlayingMoviesSlider(),
             Gap(20),
-            UpComingWidget(),
+            UpComingButtonWidget(),
             PopularMoviesRow(),
             PopularMoviesListView(),
             TopRatedMoviesRow(),

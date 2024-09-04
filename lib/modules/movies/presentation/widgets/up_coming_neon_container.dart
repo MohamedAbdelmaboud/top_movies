@@ -28,7 +28,7 @@ class UpComingNeonContainer extends StatelessWidget {
       child: Roulette(
         child: TextButton(
             onPressed: () {
-              GoRouter.of(context).go(AppRouter.login);
+              context.push(AppRouter.upcoming);
             },
             child: Text(
               'Up Coming Movies',

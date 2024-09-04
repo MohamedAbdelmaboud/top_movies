@@ -4,6 +4,7 @@ import 'package:top_movies/core/utils/service_locator.dart';
 import 'package:top_movies/modules/auth/presentation/view/login_view.dart';
 import 'package:top_movies/modules/movies/domain/usecases/get_now_playing_movies_use_case.dart';
 import 'package:top_movies/modules/movies/presentation/views/home_view.dart';
+import 'package:top_movies/modules/movies/presentation/views/upcoming_view.dart';
 import 'package:top_movies/modules/onboarding/presentation/views/onboarding_view.dart';
 import 'package:top_movies/modules/splash/presentation/views/splash_view.dart';
 
@@ -22,9 +23,12 @@ class AppRouter {
   static const String movieDetails = '/movieDetails';
   static const String upcoming = '/upcoming';
 
-
   static final router = GoRouter(
     routes: [
+      GoRoute(
+        path: upcoming,
+        builder: (context, state) => const UpcomingView(),
+      ),
       GoRoute(
         path: splah,
         builder: (context, state) => const SplashView(),

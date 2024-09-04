@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:top_movies/modules/movies/presentation/widgets/up_coming_neon_container.dart';
 
-class UpComingWidget extends StatelessWidget {
-  const UpComingWidget({
+class UpComingButtonWidget extends StatelessWidget {
+  const UpComingButtonWidget({
     super.key,
   });
 
