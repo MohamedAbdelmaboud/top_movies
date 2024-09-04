@@ -19,6 +19,10 @@ class AppRouter {
   static const String register = '/register';
   static const String profile = '/profile';
   static const String onboarding = '/onboarding';
+  static const String movieDetails = '/movieDetails';
+  static const String upcoming = '/upcoming';
+
+
   static final router = GoRouter(
     routes: [
       GoRoute(

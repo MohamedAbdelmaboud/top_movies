@@ -13,6 +13,9 @@ class PopularMoviesListView extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<MoviesBloc, MoviesState>(
       builder: (context, state) {
+        print('PopularMoviesListView build');
+        
+        
         final moviesList = state.popularMovies;
         switch (state.popularStatus) {
           case MoviesStatus.loading:

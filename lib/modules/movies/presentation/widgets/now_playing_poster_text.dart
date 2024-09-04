@@ -15,7 +15,7 @@ class NowPlayingPosterText extends StatelessWidget {
       fontWeight: FontWeight.bold,
       spreadColor: Colors.red,
       blurRadius: 25,
-      textSize: 16,
+      textSize: 18,
       letterSpacing: 5,
     );
   }
