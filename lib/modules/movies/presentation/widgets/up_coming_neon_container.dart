@@ -32,7 +32,7 @@ class UpComingNeonContainer extends StatelessWidget {
               context.push(AppRouter.upcoming);
             },
             child: Text(
-              'Up Coming Movies',
+              'Upcoming Movies',
               style: AppStyles.bold13,
             )),
       ),

@@ -12,7 +12,7 @@ class UpcomingMoviesLoading extends StatelessWidget {
       child: Center(
         child: LoadingAnimationWidget.beat(
           color: Colors.white,
-          size: 200,
+          size: 50,
         ),
       ),
     );

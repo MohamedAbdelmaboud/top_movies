@@ -18,9 +18,7 @@ class MovieUpcomingImage extends StatelessWidget {
         height: 150,
         fit: BoxFit.cover,
         imageUrl: getImageUrl(imagePath),
-        placeholder: (context, url) =>
-            const MovieLoadingShimmer(), // TODO: Add MovieLoadingShimmer instead of this
-
+        placeholder: (context, url) => const MovieLoadingShimmer(),
         errorWidget: (context, url, error) => const Icon(Icons.error),
       ),
     );

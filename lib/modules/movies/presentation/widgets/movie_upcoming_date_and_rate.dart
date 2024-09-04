@@ -21,7 +21,7 @@ class MovieUpcomingDateAndRate extends StatelessWidget {
         const Gap(8),
         const Icon(
           Icons.star,
-          color: Colors.yellowAccent,
+          color: Color(0xffFF8700),
           size: 14,
         ),
         const Gap(5),

@@ -3,6 +3,7 @@ import 'package:dio/dio.dart';
 
 import '../../../../core/error/failures.dart';
 import '../../../../core/utils/app_constance.dart';
+import '../models/movie_details_model.dart';
 import '../models/movie_model.dart';
 
 abstract class BaseRemoteDataSource {
@@ -10,6 +11,7 @@ abstract class BaseRemoteDataSource {
   Future<Either<Failure, List<MovieModel>>> getTopRatedMovies();
   Future<Either<Failure, List<MovieModel>>> getPopularMovies();
   Future<Either<Failure, List<MovieModel>>> getUpcomingMovies();
+  Future<Either<Failure, MovieDetailsModel>> getMovieDetails(int movieId);
 }
 
 class MovieRemoteDataSource implements BaseRemoteDataSource {
@@ -82,6 +84,22 @@ class MovieRemoteDataSource implements BaseRemoteDataSource {
         (index) => MovieModel.fromJson(json[index]),
       );
       return right(movies);
+    } on DioException catch (e) {
+      return left(ServerFailure.fromDioException(e));
+    }
+  }
+
+  @override
+  Future<Either<Failure, MovieDetailsModel>> getMovieDetails(
+    int movieId,
+  ) async {
+    try {
+      Response response = await dio.get(
+        getMovieDetailsPath(movieId),
+      );
+      MovieDetailsModel movie = MovieDetailsModel.fromJson(response.data);
+
+      return right(movie);
     } on DioException catch (e) {
       return left(ServerFailure.fromDioException(e));
     }
