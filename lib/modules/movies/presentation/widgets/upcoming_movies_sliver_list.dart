@@ -1,8 +1,9 @@
-import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
-import 'package:gap/gap.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'movie_upcoming_item.dart';
+import '../controller/bloc/movies_bloc.dart';
+import 'up_coming_movies_loaded.dart';
+import 'upcoming_movies_loading.dart';
 
 class UpcomingMoviesSliverList extends StatelessWidget {
   const UpcomingMoviesSliverList({
@@ -11,19 +12,21 @@ class UpcomingMoviesSliverList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SliverList.separated(
-      separatorBuilder: (BuildContext context, int index) {
-        return const Gap(25);
-      },
-      itemCount: 10,
-      itemBuilder: (BuildContext context, int index) {
-        return FadeInLeftBig(
-          onFinish: (direction) {
-            debugPrint('Finish $direction');
-          },
-          duration: Duration(milliseconds: 150 * index),
-          child: const MovieUpcomingItem(),
-        );
+    return BlocBuilder<MoviesBloc, MoviesState>(
+      builder: (context, state) {
+        final moviesList = state.upcomingMovies;
+        switch (state.upcomingStatus) {
+          case MoviesStatus.loading:
+            return const UpcomingMoviesLoading();
+          case MoviesStatus.error:
+            return SliverToBoxAdapter(
+              child: Center(
+                child: Text(state.popularErrorMessage),
+              ),
+            );
+          case MoviesStatus.loaded:
+            return UpComingMoviesLoaded(moviesList: moviesList);
+        }
       },
     );
   }

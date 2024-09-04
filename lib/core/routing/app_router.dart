@@ -6,6 +6,7 @@ import '../../modules/auth/presentation/view/sign_up_view.dart';
 import '../../modules/movies/domain/usecases/get_now_playing_movies_use_case.dart';
 import '../../modules/movies/domain/usecases/get_popular_movies_use_case.dart';
 import '../../modules/movies/domain/usecases/get_top_rated_movies_use_case.dart';
+import '../../modules/movies/domain/usecases/get_upcoming_movies_use_case.dart';
 import '../../modules/movies/presentation/controller/bloc/movies_bloc.dart';
 import '../../modules/movies/presentation/views/home_view.dart';
 import '../../modules/movies/presentation/views/upcoming_view.dart';
@@ -27,7 +28,17 @@ class AppRouter {
     routes: [
       GoRoute(
         path: upcoming,
-        builder: (context, state) => const UpcomingView(),
+        builder: (context, state) => BlocProvider(
+          create: (context) => MoviesBloc(
+            getIt<GetNowPlayingMoviesUseCase>(),
+            getIt<GetPopularMoviesUseCase>(),
+            getIt<GetTopRatedMoviesUseCase>(),
+            getIt<GetUpcomingMoviesUseCase>(),
+          )..add(
+              GetUpcomingMoviesEvent(),
+            ),
+          child: const UpcomingView(),
+        ),
       ),
       GoRoute(
         path: splah,
@@ -52,6 +63,7 @@ class AppRouter {
             getIt<GetNowPlayingMoviesUseCase>(),
             getIt<GetPopularMoviesUseCase>(),
             getIt<GetTopRatedMoviesUseCase>(),
+            getIt<GetUpcomingMoviesUseCase>(),
           )
             ..add(
               GetNowPlayingMoviesEvent(),
@@ -61,6 +73,9 @@ class AppRouter {
             )
             ..add(
               GetTopRatedMoviesEvent(),
+            )
+            ..add(
+              GetUpcomingMoviesEvent(),
             ),
           child: const HomeView(),
         ),

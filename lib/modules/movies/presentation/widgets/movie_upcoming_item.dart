@@ -3,14 +3,13 @@ import 'package:gap/gap.dart';
 import 'package:neon_widgets/neon_widgets.dart';
 
 import '../../../../core/utils/app_colors.dart';
+import '../../domain/entites/movie.dart';
 import 'movie_upcoming_image.dart';
 import 'movie_upcoming_right_side.dart';
 
 class MovieUpcomingItem extends StatelessWidget {
-  const MovieUpcomingItem({
-    super.key,
-  });
-
+  const MovieUpcomingItem({super.key, required this.movie});
+  final Movie movie;
   @override
   Widget build(BuildContext context) {
     return NeonContainer(
@@ -20,13 +19,17 @@ class MovieUpcomingItem extends StatelessWidget {
       spreadColor: AppColors.primaryColor.withOpacity(0.5),
       borderColor: AppColors.gradient1.withOpacity(0.7),
       borderWidth: 2,
-      child: const Padding(
-        padding: EdgeInsets.all(8),
+      child: Padding(
+        padding: const EdgeInsets.all(8),
         child: Row(
           children: [
-            MovieUpcomingImage(),
-            Gap(12),
-            MovieUpcomingRightSide(),
+            MovieUpcomingImage(
+              imagePath: movie.posterPath,
+            ),
+            const Gap(12),
+            MovieUpcomingRightSide(
+              movie: movie,
+            ),
           ],
         ),
       ),

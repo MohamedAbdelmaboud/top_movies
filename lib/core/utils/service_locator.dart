@@ -7,6 +7,7 @@ import '../../modules/movies/domain/repository/movie_repository.dart';
 import '../../modules/movies/domain/usecases/get_now_playing_movies_use_case.dart';
 import '../../modules/movies/domain/usecases/get_popular_movies_use_case.dart';
 import '../../modules/movies/domain/usecases/get_top_rated_movies_use_case.dart';
+import '../../modules/movies/domain/usecases/get_upcoming_movies_use_case.dart';
 
 final getIt = GetIt.instance;
 
@@ -32,6 +33,11 @@ void setup() {
   );
   getIt.registerSingleton<GetTopRatedMoviesUseCase>(
     GetTopRatedMoviesUseCase(
+      movieRepository: getIt<MovieRepository>(),
+    ),
+  );
+  getIt.registerSingleton<GetUpcomingMoviesUseCase>(
+    GetUpcomingMoviesUseCase(
       movieRepository: getIt<MovieRepository>(),
     ),
   );

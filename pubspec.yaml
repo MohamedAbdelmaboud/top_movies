@@ -51,6 +51,7 @@ dependencies:
   neon_widgets: ^2.0.0
   shared_preferences: ^2.3.2
   shimmer: ^3.0.0
+  skeletonizer: ^1.4.2
 
 dev_dependencies:
   flutter_launcher_icons: ^0.13.1

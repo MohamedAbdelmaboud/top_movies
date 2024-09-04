@@ -5,10 +5,8 @@ import '../../../../core/utils/app_constance.dart';
 import 'movie_loading_shimmer.dart';
 
 class MovieUpcomingImage extends StatelessWidget {
-  const MovieUpcomingImage({
-    super.key,
-  });
-
+  const MovieUpcomingImage({super.key, required this.imagePath});
+  final String imagePath;
   @override
   Widget build(BuildContext context) {
     return ClipRRect(
@@ -19,7 +17,7 @@ class MovieUpcomingImage extends StatelessWidget {
         width: 100.0,
         height: 150,
         fit: BoxFit.cover,
-        imageUrl: getImageUrl('/zKpLzzX1va6gkMJiI9p3DudqChe.jpg'),
+        imageUrl: getImageUrl(imagePath),
         placeholder: (context, url) =>
             const MovieLoadingShimmer(), // TODO: Add MovieLoadingShimmer instead of this
 

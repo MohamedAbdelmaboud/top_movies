@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 import '../../../../core/utils/app_styles.dart';
 
 class MovieUpcomingDate extends StatelessWidget {
   const MovieUpcomingDate({
     super.key,
+    required this.releaseDate,
   });
-
+  final String releaseDate;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -18,7 +20,11 @@ class MovieUpcomingDate extends StatelessWidget {
         color: Colors.red,
       ),
       child: Text(
-        'Jan 2024',
+        DateFormat.yMMM().format(
+          DateTime.parse(
+            releaseDate,
+          ),
+        ),
         style: AppStyles.bold9,
       ),
     );

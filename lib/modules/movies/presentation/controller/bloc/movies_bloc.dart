@@ -116,14 +116,14 @@ class MoviesBloc extends Bloc<MoviesEvent, MoviesState> {
     result.fold(
       (failure) => emit(
         state.copyWith(
-          topRatedErrorMessage: failure.errorMessage,
-          topRatedStatus: MoviesStatus.error,
+          upcomingErrorMessage: failure.errorMessage,
+          upcomingStatus: MoviesStatus.error,
         ),
       ),
       (movies) => emit(
         state.copyWith(
-          topRatedMovies: movies,
-          topRatedStatus: MoviesStatus.loaded,
+          upcomingMovies: movies,
+          upcomingStatus: MoviesStatus.loaded,
         ),
       ),
     );

@@ -5,8 +5,9 @@ import '../../../../core/utils/app_styles.dart';
 class MovieUpcomingOverview extends StatelessWidget {
   const MovieUpcomingOverview({
     super.key,
+    required this.overview,
   });
-
+  final String overview;
   @override
   Widget build(BuildContext context) {
     return ConstrainedBox(
@@ -14,7 +15,7 @@ class MovieUpcomingOverview extends StatelessWidget {
         maxWidth: MediaQuery.of(context).size.width * .6,
       ),
       child: Text(
-        'Doctor Strange, with the help of mystical allies both old and new, traverses the mind-bending and dangerous alternate realities of the Multiverse to confront a mysterious new adversary.',
+        overview,
         style: AppStyles.medium12,
         overflow: TextOverflow.ellipsis, // Ensures ellipsis when overflowing
         maxLines: 2, // Limits the text to two lines

@@ -10,7 +10,7 @@ class UpcomingFlickerText extends StatelessWidget {
   Widget build(BuildContext context) {
     return const FlickerNeonText(
       text: "Upcoming Movies",
-      flickerTimeInMilliSeconds: 800,
+      flickerTimeInMilliSeconds: 5000,
       fontFamily: 'Montserrat',
       fontWeight: FontWeight.bold,
       spreadColor: Colors.red,
