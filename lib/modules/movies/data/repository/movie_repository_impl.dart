@@ -3,6 +3,7 @@ import 'package:dartz/dartz.dart';
 import '../../../../core/error/failures.dart';
 import '../../domain/entites/movie.dart';
 import '../../domain/entites/movie_details.dart';
+import '../../domain/entites/recommendation.dart';
 import '../../domain/repository/movie_repository.dart';
 import '../datasource/movie_remote_data_source.dart';
 
@@ -39,6 +40,13 @@ class MovieRepositoryImpl implements MovieRepository {
   @override
   Future<Either<Failure, MovieDetails>> getMovieDetails(int movieId) {
     final result = remoteDataSource.getMovieDetails(movieId);
+    return result;
+  }
+
+  @override
+  Future<Either<Failure, List<Recommendation>>> getRecommendationMovies(
+      int movieId) {
+    final result = remoteDataSource.getRecommendations(movieId);
     return result;
   }
 }

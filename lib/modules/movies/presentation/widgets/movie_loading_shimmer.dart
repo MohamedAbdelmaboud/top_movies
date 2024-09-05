@@ -4,7 +4,11 @@ import 'package:shimmer/shimmer.dart';
 class MovieLoadingShimmer extends StatelessWidget {
   const MovieLoadingShimmer({
     super.key,
+    this.height = 170.0,
+    this.width = 130.0,
   });
+  final double height;
+  final double width;
 
   @override
   Widget build(BuildContext context) {

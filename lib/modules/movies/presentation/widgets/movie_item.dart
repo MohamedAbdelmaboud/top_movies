@@ -23,7 +23,9 @@ class MovieItem extends StatelessWidget {
         width: 140.0,
         fit: BoxFit.cover,
         imageUrl: getImageUrl(movie.posterPath),
-        placeholder: (context, url) => const MovieLoadingShimmer(),
+        placeholder: (context, url) => const MovieLoadingShimmer(
+          width:140
+        ),
         errorWidget: (context, url, error) => const Icon(Icons.error),
       ),
     );

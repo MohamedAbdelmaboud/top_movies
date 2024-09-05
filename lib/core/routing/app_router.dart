@@ -9,6 +9,7 @@ import '../../modules/movies/domain/usecases/get_top_rated_movies_use_case.dart'
 import '../../modules/movies/domain/usecases/get_upcoming_movies_use_case.dart';
 import '../../modules/movies/presentation/controller/bloc/movies_bloc.dart';
 import '../../modules/movies/presentation/views/home_view.dart';
+import '../../modules/movies/presentation/views/movies_details_view.dart';
 import '../../modules/movies/presentation/views/upcoming_view.dart';
 import '../../modules/onboarding/presentation/views/onboarding_view.dart';
 import '../../modules/splash/presentation/views/splash_view.dart';
@@ -26,6 +27,10 @@ class AppRouter {
 
   static final router = GoRouter(
     routes: [
+      GoRoute(
+        path: movieDetails,
+        builder: (context, state) => const MoviesDetailView(id: 1216191),
+      ),
       GoRoute(
         path: upcoming,
         builder: (context, state) => BlocProvider(

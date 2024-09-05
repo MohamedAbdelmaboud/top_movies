@@ -5,6 +5,7 @@ import '../../../../core/error/failures.dart';
 import '../../../../core/utils/app_constance.dart';
 import '../models/movie_details_model.dart';
 import '../models/movie_model.dart';
+import '../models/recommendation_model.dart';
 
 abstract class BaseRemoteDataSource {
   Future<Either<Failure, List<MovieModel>>> getNowPlayingMovies();
@@ -12,6 +13,8 @@ abstract class BaseRemoteDataSource {
   Future<Either<Failure, List<MovieModel>>> getPopularMovies();
   Future<Either<Failure, List<MovieModel>>> getUpcomingMovies();
   Future<Either<Failure, MovieDetailsModel>> getMovieDetails(int movieId);
+  Future<Either<Failure, List<RecommendationModel>>> getRecommendations(
+      int movieId);
 }
 
 class MovieRemoteDataSource implements BaseRemoteDataSource {
@@ -100,6 +103,25 @@ class MovieRemoteDataSource implements BaseRemoteDataSource {
       MovieDetailsModel movie = MovieDetailsModel.fromJson(response.data);
 
       return right(movie);
+    } on DioException catch (e) {
+      return left(ServerFailure.fromDioException(e));
+    }
+  }
+
+  @override
+  Future<Either<Failure, List<RecommendationModel>>> getRecommendations(
+      int movieId) async {
+    try {
+      Response response = await dio.get(
+        upcomingMovies,
+      );
+      List<dynamic> json = response.data['results'];
+      List<RecommendationModel> recommendationMovies = List.generate(
+        json.length,
+        (index) => RecommendationModel.fromJson(json[index]),
+      );
+
+      return right(recommendationMovies);
     } on DioException catch (e) {
       return left(ServerFailure.fromDioException(e));
     }
