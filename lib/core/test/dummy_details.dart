@@ -23,29 +23,29 @@ MovieDetails movieDetailDummy = const MovieDetails(
 
 List<Recommendation> recommendationDummy = [
   const Recommendation(
-      posterPath: "/ta17TltHGdZ5PZz6oUD3N5BRurb.jpg", id: 924482),
+      posterPath: "/uln9Efc2vzDOl0Fue2BPs8l1WO7.jpg", id: 924482),
   const Recommendation(
-      posterPath: "/ta17TltHGdZ5PZz6oUD3N5BRurb.jpg", id: 924482),
+      posterPath: "/uln9Efc2vzDOl0Fue2BPs8l1WO7.jpg", id: 924482),
   const Recommendation(
-      posterPath: "/ta17TltHGdZ5PZz6oUD3N5BRurb.jpg", id: 924482),
+      posterPath: "/uln9Efc2vzDOl0Fue2BPs8l1WO7.jpg", id: 924482),
   const Recommendation(
-      posterPath: "/ta17TltHGdZ5PZz6oUD3N5BRurb.jpg", id: 924482),
+      posterPath: "/uln9Efc2vzDOl0Fue2BPs8l1WO7.jpg", id: 924482),
   const Recommendation(
-      posterPath: "/ta17TltHGdZ5PZz6oUD3N5BRurb.jpg", id: 924482),
+      posterPath: "/uln9Efc2vzDOl0Fue2BPs8l1WO7.jpg", id: 924482),
   const Recommendation(
-      posterPath: "/ta17TltHGdZ5PZz6oUD3N5BRurb.jpg", id: 924482),
+      posterPath: "/uln9Efc2vzDOl0Fue2BPs8l1WO7.jpg", id: 924482),
   const Recommendation(
-      posterPath: "/ta17TltHGdZ5PZz6oUD3N5BRurb.jpg", id: 924482),
+      posterPath: "/uln9Efc2vzDOl0Fue2BPs8l1WO7.jpg", id: 924482),
   const Recommendation(
-      posterPath: "/ta17TltHGdZ5PZz6oUD3N5BRurb.jpg", id: 924482),
+      posterPath: "/uln9Efc2vzDOl0Fue2BPs8l1WO7.jpg", id: 924482),
   const Recommendation(
-      posterPath: "/ta17TltHGdZ5PZz6oUD3N5BRurb.jpg", id: 924482),
+      posterPath: "/uln9Efc2vzDOl0Fue2BPs8l1WO7.jpg", id: 924482),
   const Recommendation(
-      posterPath: "/ta17TltHGdZ5PZz6oUD3N5BRurb.jpg", id: 924482),
+      posterPath: "/uln9Efc2vzDOl0Fue2BPs8l1WO7.jpg", id: 924482),
   const Recommendation(
-      posterPath: "/ta17TltHGdZ5PZz6oUD3N5BRurb.jpg", id: 924482),
+      posterPath: "/uln9Efc2vzDOl0Fue2BPs8l1WO7.jpg", id: 924482),
   const Recommendation(
-      posterPath: "/ta17TltHGdZ5PZz6oUD3N5BRurb.jpg", id: 924482),
+      posterPath: "/uln9Efc2vzDOl0Fue2BPs8l1WO7.jpg", id: 924482),
   const Recommendation(
-      posterPath: "/ta17TltHGdZ5PZz6oUD3N5BRurb.jpg", id: 924482),
+      posterPath: "/uln9Efc2vzDOl0Fue2BPs8l1WO7.jpg", id: 924482),
 ];

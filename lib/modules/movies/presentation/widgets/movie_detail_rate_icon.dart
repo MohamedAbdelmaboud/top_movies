@@ -1,3 +1,6 @@
+import 'package:gap/gap.dart';
+
+import '../../../../core/utils/app_styles.dart';
 import '../../domain/entites/movie_details.dart';
 import 'package:flutter/material.dart';
 

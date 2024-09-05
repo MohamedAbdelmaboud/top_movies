@@ -1,7 +1,7 @@
+import 'package:flutter/material.dart';
+
 import '../../domain/entites/movie_details.dart';
 import 'movie_detail_rate_icon.dart';
-import 'movie_details_image_cover.dart';
-import 'package:flutter/material.dart';
 
 class MovieDetailRateWidget extends StatelessWidget {
   const MovieDetailRateWidget({
@@ -19,7 +19,7 @@ class MovieDetailRateWidget extends StatelessWidget {
       child: Container(
         alignment: Alignment.center,
         width: 65,
-        height: 24,
+        height: 30,
         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
         decoration: ShapeDecoration(
           color: const Color.fromARGB(81, 17, 18, 20),

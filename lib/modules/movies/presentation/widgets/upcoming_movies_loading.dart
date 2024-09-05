@@ -10,7 +10,7 @@ class UpcomingMoviesLoading extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
       child: Center(
-        child: LoadingAnimationWidget.beat(
+        child: LoadingAnimationWidget.discreteCircle(
           color: Colors.white,
           size: 50,
         ),

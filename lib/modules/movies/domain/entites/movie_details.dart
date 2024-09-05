@@ -7,14 +7,22 @@ class MovieDetails extends Equatable {
   final int budget;
   final List<Genre> genres;
   final int id;
+
   final String overview;
+
   final String posterPath;
+
   final String releaseDate;
+
   final int runtime;
   final String status;
+
   final String tagline;
+
   final String title;
+
   final double voteAverage;
+
   final int voteCount;
 
   const MovieDetails({

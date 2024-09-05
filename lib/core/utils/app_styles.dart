@@ -29,6 +29,11 @@ class AppStyles {
     fontSize: 13,
     color: const Color(0xFFFFFFFF),
   );
+  static final TextStyle regular14 = _regular.copyWith(
+    fontSize: 14,
+    color: const Color(0xFFFFFFFF),
+  );
+
   static final TextStyle regular16 = _regular.copyWith(
     fontSize: 16,
     color: const Color(0xFFFFFFFF),
