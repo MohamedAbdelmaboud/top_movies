@@ -113,7 +113,7 @@ class MovieRemoteDataSource implements BaseRemoteDataSource {
       int movieId) async {
     try {
       Response response = await dio.get(
-        upcomingMovies,
+        getMoviesRecommendationsPath(movieId),
       );
       List<dynamic> json = response.data['results'];
       List<RecommendationModel> recommendationMovies = List.generate(

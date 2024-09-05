@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../controller/bloc/movies_bloc.dart';
+import '../controller/movies_bloc/movies_bloc.dart';
 import 'movies_loading.dart';
 import 'top_rated_movies_loaded.dart';
 

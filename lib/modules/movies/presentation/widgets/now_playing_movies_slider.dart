@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../core/utils/app_styles.dart';
-import '../controller/bloc/movies_bloc.dart';
+import '../controller/movies_bloc/movies_bloc.dart';
 import 'movies_loaded_slider.dart';
 import 'movies_loading_slider.dart';
 

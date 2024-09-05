@@ -20,7 +20,7 @@ class MoviesLoadedSlider extends StatelessWidget {
       items: moviesList.map(
         (item) {
           return SliderPosterMovieItem(
-            posterPath: item.posterPath,
+            movie: item,
           );
         },
       ).toList(),

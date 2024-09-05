@@ -1,7 +1,9 @@
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:go_router/go_router.dart';
 
+import '../../../../core/routing/app_router.dart';
 import '../../domain/entites/movie.dart';
 import 'movie_item.dart';
 
@@ -28,7 +30,7 @@ class TopRatedMoviesLoaded extends StatelessWidget {
             final movie = moviesList[index];
             return InkWell(
               onTap: () {
-                /// TODO : NAVIGATE TO  MOVIE DETAILS
+                context.push(AppRouter.movieDetails, extra: movie.id);
               },
               child: MovieItem(movie: movie),
             );

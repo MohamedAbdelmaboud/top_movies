@@ -1,9 +1,8 @@
-import '../../../../core/utils/app_styles.dart';
-import '../../domain/entites/movie_details.dart';
-import '../views/movies_details_view.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 
+import '../../../../core/utils/app_styles.dart';
+import '../../domain/entites/movie_details.dart';
 import 'movie_details_status.dart';
 
 class MovieDetailsOverViewRow extends StatelessWidget {

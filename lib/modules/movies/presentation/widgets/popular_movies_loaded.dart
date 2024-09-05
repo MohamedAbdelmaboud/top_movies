@@ -30,7 +30,7 @@ class PopularMoviesLoaded extends StatelessWidget {
             final movie = moviesList[index];
             return InkWell(
               onTap: () {
-                context.push(AppRouter.movieDetails);
+                context.push(AppRouter.movieDetails, extra: movie.id);
               },
               child: MovieItem(movie: movie),
             );

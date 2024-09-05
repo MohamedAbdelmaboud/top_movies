@@ -1,16 +1,15 @@
-import '../../../../core/test/dummy_details.dart';
-import '../../../../core/utils/app_constance.dart';
-import '../../domain/entites/movie_details.dart';
-import '../../domain/entites/recommendation.dart';
-import 'budget_widget.dart';
-import 'movie_details_icons_row.dart';
-import 'movie_details_over_view.dart';
-import 'movie_details_stack.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:shimmer/shimmer.dart';
+
+import '../../../../core/utils/app_constance.dart';
+import '../../domain/entites/movie_details.dart';
+import '../../domain/entites/recommendation.dart';
+import 'movie_details_icons_row.dart';
+import 'movie_details_over_view.dart';
+import 'movie_details_stack.dart';
 import 'recommended_movies_widget.dart';
 
 class MovieDetailsViewBody extends StatelessWidget {
@@ -28,22 +27,12 @@ class MovieDetailsViewBody extends StatelessWidget {
     return CustomScrollView(
       key: const Key('movieDetailScrollView'),
       slivers: [
-        SliverToBoxAdapter(
-          child: IconButton(
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              icon: const Icon(
-                Icons.arrow_back_ios,
-                color: Colors.amberAccent,
-              )),
-        ),
         MovieDetailsStack(movie: movie),
         const SliverToBoxAdapter(
           child: Gap(70),
         ),
         const MovieDetailsIconsRow(),
-        const BudgetWidget(),
+        // const BudgetWidget(),
         MovieDetailsOverView(movie: movie),
         const RecommendedMoviesWidget(),
         SliverPadding(
@@ -85,7 +74,7 @@ class MovieDetailsViewBody extends StatelessWidget {
             ),
           );
         },
-        childCount: recommendationDummy.length,
+        childCount: recommendations.length,
       ),
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
         mainAxisSpacing: 12.0,

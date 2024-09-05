@@ -31,6 +31,7 @@ class MovieDetailsTitle extends StatelessWidget {
             Text(
               movie.tagline,
               style: AppStyles.bold10,
+              textAlign: TextAlign.center,
             )
           ],
         ),
