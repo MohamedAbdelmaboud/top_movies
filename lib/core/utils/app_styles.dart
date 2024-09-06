@@ -95,6 +95,11 @@ class AppStyles {
     fontSize: 13,
     color: const Color(0xFFFFFFFF),
   );
+//14
+  static final TextStyle bold14 = _bold.copyWith(
+    fontSize: 14,
+    color: const Color(0xFFFFFFFF),
+  );
 
   static final TextStyle bold16 = _bold.copyWith(
     fontSize: 16,
