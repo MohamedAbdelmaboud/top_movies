@@ -10,7 +10,7 @@ class GetPopularMoviesUseCase {
   GetPopularMoviesUseCase({
     required this.movieRepository,
   });
-  Future<Either<Failure, List<Movie>>> excute() async {
+  Future<Either<Failure, List<Movie>>> execute() async {
     return await movieRepository.getPopularMovies();
   }
 }

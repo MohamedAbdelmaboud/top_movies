@@ -11,7 +11,7 @@ class GetNowPlayingMoviesUseCase {
     required this.movieRepository,
   });
   //  call or excute
-  Future<Either<Failure, List<Movie>>> excute() async {
+  Future<Either<Failure, List<Movie>>> execute() async {
     return await movieRepository.getNowPlayingMovies();
   }
 }

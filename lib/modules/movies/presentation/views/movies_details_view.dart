@@ -32,6 +32,7 @@ class MoviesDetailView extends StatelessWidget {
           return MovieDetailsViewBody(
             movie: state.movieDetails!,
             recommendations: state.recommendations,
+            castMembers: state.cast,
           );
         },
       ),

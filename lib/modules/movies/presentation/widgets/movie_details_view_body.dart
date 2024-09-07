@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
+import '../../domain/entites/cast.dart';
 import '../../domain/entites/movie_details.dart';
 import '../../domain/entites/recommendation.dart';
 import 'cast_item.dart';
@@ -14,11 +15,12 @@ import 'recommended_movies_sliver_grid.dart';
 class MovieDetailsViewBody extends StatelessWidget {
   final MovieDetails movie;
   final List<Recommendation> recommendations;
-
+  final List<Cast> castMembers;
   const MovieDetailsViewBody({
     super.key,
     required this.movie,
     required this.recommendations,
+    required this.castMembers,
   });
 
   @override
@@ -43,14 +45,16 @@ class MovieDetailsViewBody extends StatelessWidget {
           sliver: SliverGrid(
             delegate: SliverChildBuilderDelegate(
               (context, index) {
-                return const CastItem();
+                return CastItem(
+                  cast: castMembers[index],
+                );
               },
               childCount: 4,
             ),
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               mainAxisSpacing: 12.0,
               crossAxisSpacing: 12.0,
-              childAspectRatio: 3,
+              childAspectRatio: 2.2,
               crossAxisCount: 2,
             ),
           ),

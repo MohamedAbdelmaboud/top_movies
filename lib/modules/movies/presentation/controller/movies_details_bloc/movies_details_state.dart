@@ -7,7 +7,9 @@ class MoviesDetailsState extends Equatable {
   final String recommendationsErrorMessage;
   final MoviesStatus recommendationsStatus;
   final MoviesStatus detailsStatus;
-
+  final List<Cast> cast;
+  final MoviesStatus castStatus;
+  final String castErrorMessage;
   const MoviesDetailsState({
     this.movieDetails,
     this.recommendations = const [],
@@ -15,6 +17,9 @@ class MoviesDetailsState extends Equatable {
     this.recommendationsErrorMessage = '',
     this.recommendationsStatus = MoviesStatus.loading,
     this.detailsStatus = MoviesStatus.loading,
+    this.cast = const [],
+    this.castErrorMessage = '',
+    this.castStatus = MoviesStatus.loading,
   });
 
   @override
@@ -25,8 +30,11 @@ class MoviesDetailsState extends Equatable {
         recommendationsErrorMessage,
         recommendationsStatus,
         detailsStatus,
+        cast,
+        castStatus,
+        castErrorMessage,
       ];
-  // copyWith method
+
   MoviesDetailsState copyWith({
     MovieDetails? movieDetails,
     List<Recommendation>? recommendations,
@@ -34,6 +42,9 @@ class MoviesDetailsState extends Equatable {
     String? recommendationsErrorMessage,
     MoviesStatus? recommendationsStatus,
     MoviesStatus? detailsStatus,
+    List<Cast>? cast,
+    MoviesStatus? castStatus,
+    String? castErrorMessage,
   }) {
     return MoviesDetailsState(
       movieDetails: movieDetails ?? this.movieDetails,
@@ -44,6 +55,9 @@ class MoviesDetailsState extends Equatable {
       recommendationsStatus:
           recommendationsStatus ?? this.recommendationsStatus,
       detailsStatus: detailsStatus ?? this.detailsStatus,
+      cast: cast ?? this.cast,
+      castStatus: castStatus ?? this.castStatus,
+      castErrorMessage: castErrorMessage ?? this.castErrorMessage,
     );
   }
 }

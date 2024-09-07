@@ -53,4 +53,10 @@ void setup() {
       movieRepository: getIt<MovieRepository>(),
     ),
   );
+  // get cast
+  getIt.registerSingleton<GetCastUseCase>(
+    GetCastUseCase(
+      movieRepository: getIt<MovieRepository>(),
+    ),
+  );
 }

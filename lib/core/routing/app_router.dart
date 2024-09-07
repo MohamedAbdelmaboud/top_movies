@@ -37,13 +37,15 @@ class AppRouter {
           create: (context) => MoviesDetailsBloc(
             getIt<GetMovieDetailsUseCase>(),
             getIt<GetRecommendationMoviesUseCase>(),
+            getIt<GetCastUseCase>(),
           )
             ..add(
               GetMoviesDetailsEvent(state.extra as int),
             )
             ..add(
               GetMoviesRecommendationsEvent(state.extra as int),
-            ),
+            )
+            ..add(GetCastEvent(state.extra as int)),
           child: const MoviesDetailView(),
         ),
       ),

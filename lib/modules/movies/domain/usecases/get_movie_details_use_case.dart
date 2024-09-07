@@ -11,7 +11,7 @@ class GetMovieDetailsUseCase {
     required this.movieRepository,
   });
   //  call or excute
-  Future<Either<Failure, MovieDetails>> excute(int movieId) async {
+  Future<Either<Failure, MovieDetails>> execute(int movieId) async {
     return await movieRepository.getMovieDetails(movieId);
   }
 }

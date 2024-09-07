@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:gradient_borders/gradient_borders.dart';
 
+import '../../domain/entites/cast.dart';
 import 'cast_item_image.dart';
 
 class CastItemContainerImage extends StatelessWidget {
   const CastItemContainerImage({
     super.key,
+    required this.cast,
   });
+  final Cast cast;
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +32,9 @@ class CastItemContainerImage extends StatelessWidget {
           ),
           color: Color(0xFF5D5D5D),
         ),
-        child: const CastItemImage(),
+        child: CastItemImage(
+          profilePath: cast.profilePath!,
+        ),
       ),
     );
   }
