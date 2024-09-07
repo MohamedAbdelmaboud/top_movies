@@ -13,6 +13,7 @@ String topRatedMovies = getEndpoint('movie/top_rated');
 String upcomingMovies = getEndpoint('movie/upcoming');
 String getMoviesRecommendationsPath(int movieId) =>
     getEndpoint('movie/$movieId/recommendations');
+String getCastPath(int movieId) => getEndpoint('movie/$movieId/credits');
 String getImageUrl(String path) => 'https://image.tmdb.org/t/p/w500$path';
 String getMovieDetailsPath(int movieId) => getEndpoint('movie/$movieId');
 /*

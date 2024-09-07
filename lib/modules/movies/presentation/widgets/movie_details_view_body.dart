@@ -37,14 +37,27 @@ class MovieDetailsViewBody extends StatelessWidget {
         const SliverToBoxAdapter(
           child: Gap(18),
         ),
-        const CastItem(),
-
+        // const CastItem(),
+        SliverPadding(
+          padding: const EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 16.0),
+          sliver: SliverGrid(
+            delegate: SliverChildBuilderDelegate(
+              (context, index) {
+                return const CastItem();
+              },
+              childCount: 4,
+            ),
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              mainAxisSpacing: 12.0,
+              crossAxisSpacing: 12.0,
+              childAspectRatio: 3.1,
+              crossAxisCount: 2,
+            ),
+          ),
+        ),
         const MoreLikeThisWidget(),
         RecommendedMoviesSliverGrid(recommendations: recommendations),
       ],
-    
-    
-    
     );
   }
 }

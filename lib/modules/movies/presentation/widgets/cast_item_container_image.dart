@@ -12,7 +12,7 @@ class CastItemContainerImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Positioned(
       top: -2.5,
-      left: 0,
+      left: -2,
       child: Container(
         width: 63,
         height: 63,
