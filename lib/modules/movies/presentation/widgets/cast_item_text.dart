@@ -1,5 +1,7 @@
-import '../../../../core/utils/app_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
+
+import '../../../../core/utils/app_styles.dart';
 
 class CastItemText extends StatelessWidget {
   const CastItemText({
@@ -16,9 +18,18 @@ class CastItemText extends StatelessWidget {
           'Steve Wall',
           style: AppStyles.bold14,
         ),
-        Text(
-          'Ivan',
-          style: AppStyles.regular14.copyWith(),
+        const Gap(2),
+        ConstrainedBox(
+          constraints: const BoxConstraints(
+            maxWidth: 200,
+            minHeight: 10,
+          ),
+          child: Text(
+            'Dani Timmis / Darcy Odello',
+            style: AppStyles.regular9.copyWith(),
+            maxLines: 1,
+            overflow: TextOverflow.ellipsis,
+          ),
         ),
       ],
     );

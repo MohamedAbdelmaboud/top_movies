@@ -20,7 +20,11 @@ class AppStyles {
     fontWeight: FontWeight.w800,
   );
 // regular
-
+//9
+  static final TextStyle regular9 = _regular.copyWith(
+    fontSize: 9,
+    color: const Color(0xFFFFFFFF),
+  );
   static final TextStyle regular12 = _regular.copyWith(
     fontSize: 12,
     color: const Color(0xFFFFFFFF),

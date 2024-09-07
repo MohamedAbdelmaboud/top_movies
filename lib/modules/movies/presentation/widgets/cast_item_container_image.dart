@@ -11,8 +11,8 @@ class CastItemContainerImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      top: -2.5,
-      left: -2,
+      top: -1,
+      left: -2.8,
       child: Container(
         width: 63,
         height: 63,

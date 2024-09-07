@@ -50,7 +50,7 @@ class MovieDetailsViewBody extends StatelessWidget {
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               mainAxisSpacing: 12.0,
               crossAxisSpacing: 12.0,
-              childAspectRatio: 3.1,
+              childAspectRatio: 3,
               crossAxisCount: 2,
             ),
           ),
