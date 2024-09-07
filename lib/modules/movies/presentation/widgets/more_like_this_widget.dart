@@ -1,10 +1,9 @@
+import '../../../../core/utils/app_styles.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../core/utils/app_styles.dart';
-
-class RecommendedMoviesWidget extends StatelessWidget {
-  const RecommendedMoviesWidget({
+class MoreLikeThisWidget extends StatelessWidget {
+  const MoreLikeThisWidget({
     super.key,
   });
 

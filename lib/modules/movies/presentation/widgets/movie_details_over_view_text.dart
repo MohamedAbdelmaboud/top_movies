@@ -17,7 +17,7 @@ class MovieDetailsOverViewText extends StatelessWidget {
     return Bounce(
       child: Text(
         movie.overview,
-        style: AppStyles.regular13.copyWith(
+        style: AppStyles.regular14.copyWith(
           color: AppColors.greyColor,
         ),
       ),
