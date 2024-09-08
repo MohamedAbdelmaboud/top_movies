@@ -26,6 +26,10 @@ class Assets {
   /// assets/images/google_icon.svg
   static const String assetsImagesGoogleIcon = "assets/images/google_icon.svg";
 
+  /// Assets for assetsImagesHome
+  /// assets/images/Home.svg
+  static const String assetsImagesHome = "assets/images/Home.svg";
+
   /// Assets for assetsImagesIcons8Github
   /// assets/images/icons8-github.svg
   static const String assetsImagesIcons8Github = "assets/images/icons8-github.svg";
@@ -46,6 +50,14 @@ class Assets {
   /// assets/images/onboarding_svg.svg
   static const String assetsImagesOnboardingSvg = "assets/images/onboarding_svg.svg";
 
+  /// Assets for assetsImagesSearch
+  /// assets/images/Search.svg
+  static const String assetsImagesSearch = "assets/images/Search.svg";
+
+  /// Assets for assetsImagesSearchIllstration
+  /// assets/images/Search_illstration.svg
+  static const String assetsImagesSearchIllstration = "assets/images/Search_illstration.svg";
+
   /// Assets for assetsImagesSignUp
   /// assets/images/sign_up.png
   static const String assetsImagesSignUp = "assets/images/sign_up.png";
@@ -65,6 +77,10 @@ class Assets {
   /// Assets for assetsImagesUpcoming
   /// assets/images/upcoming.png
   static const String assetsImagesUpcoming = "assets/images/upcoming.png";
+
+  /// Assets for assetsImagesUser
+  /// assets/images/user.svg
+  static const String assetsImagesUser = "assets/images/user.svg";
 
   /// Assets for assetsImagesVector
   /// assets/images/Vector.svg

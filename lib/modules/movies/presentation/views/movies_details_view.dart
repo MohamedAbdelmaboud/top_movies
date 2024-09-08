@@ -16,7 +16,8 @@ class MoviesDetailView extends StatelessWidget {
     return Scaffold(
       body: BlocBuilder<MoviesDetailsBloc, MoviesDetailsState>(
         builder: (context, state) {
-          if (state.detailsStatus == MoviesStatus.loading) {
+          if (state.detailsStatus == MoviesStatus.loading||
+              state.castStatus == MoviesStatus.loading) {
             return Center(
               child: LoadingAnimationWidget.discreteCircle(
                 color: Colors.white,

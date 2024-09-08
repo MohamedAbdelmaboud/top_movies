@@ -8,6 +8,7 @@ import '../../modules/movies/domain/usecases/get_movie_details_use_case.dart';
 import '../../modules/movies/domain/usecases/get_now_playing_movies_use_case.dart';
 import '../../modules/movies/domain/usecases/get_popular_movies_use_case.dart';
 import '../../modules/movies/domain/usecases/get_recommendation_movies_use_case.dart';
+import '../../modules/movies/domain/usecases/get_search_movies_use_case.dart';
 import '../../modules/movies/domain/usecases/get_top_rated_movies_use_case.dart';
 import '../../modules/movies/domain/usecases/get_upcoming_movies_use_case.dart';
 
@@ -56,6 +57,12 @@ void setup() {
   // get cast
   getIt.registerSingleton<GetCastUseCase>(
     GetCastUseCase(
+      movieRepository: getIt<MovieRepository>(),
+    ),
+  );
+  // register saerch
+  getIt.registerSingleton<GetSearchMoviesUseCase>(
+    GetSearchMoviesUseCase(
       movieRepository: getIt<MovieRepository>(),
     ),
   );

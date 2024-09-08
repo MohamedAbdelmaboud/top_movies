@@ -13,6 +13,7 @@ import '../../modules/movies/presentation/controller/movies_bloc/movies_bloc.dar
 import '../../modules/movies/presentation/controller/movies_details_bloc/movies_details_bloc.dart';
 import '../../modules/movies/presentation/views/home_view.dart';
 import '../../modules/movies/presentation/views/movies_details_view.dart';
+import '../../modules/movies/presentation/views/search_view.dart';
 import '../../modules/movies/presentation/views/upcoming_view.dart';
 import '../../modules/onboarding/presentation/views/onboarding_view.dart';
 import '../../modules/splash/presentation/views/splash_view.dart';
@@ -27,9 +28,13 @@ class AppRouter {
   static const String onboarding = '/onboarding';
   static const String movieDetails = '/movieDetails';
   static const String upcoming = '/upcoming';
-
+  static const String search = '/search';
   static final router = GoRouter(
     routes: [
+      GoRoute(
+        path: search,
+        builder: (context, state) => const SearchView(),
+      ),
       GoRoute(
         path: movieDetails,
         builder: (context, state) => BlocProvider(

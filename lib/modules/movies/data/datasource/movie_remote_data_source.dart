@@ -19,6 +19,7 @@ abstract class BaseRemoteDataSource {
     int movieId,
   );
   Future<Either<Failure, List<Cast>>> getCast(int movieId);
+  Future<Either<Failure, List<MovieModel>>> getSearchMovies(String query);
 }
 
 class MovieRemoteDataSource implements BaseRemoteDataSource {
@@ -144,6 +145,27 @@ class MovieRemoteDataSource implements BaseRemoteDataSource {
       );
 
       return right(cast);
+    } on DioException catch (e) {
+      return left(ServerFailure.fromDioException(e));
+    }
+  }
+
+  @override
+  Future<Either<Failure, List<MovieModel>>> getSearchMovies(
+    String query,
+  ) async {
+    try {
+      Response response = await dio.get(
+        getSearchPath(query),
+      );
+      List<dynamic> json = response.data['results'];
+
+      List<MovieModel> moviesSearchList = List.generate(
+        json.length,
+        (index) => MovieModel.fromJson(json[index]),
+      );
+
+      return right(moviesSearchList);
     } on DioException catch (e) {
       return left(ServerFailure.fromDioException(e));
     }

@@ -16,7 +16,11 @@ String getMoviesRecommendationsPath(int movieId) =>
 String getCastPath(int movieId) => getEndpoint('movie/$movieId/credits');
 String getImageUrl(String path) => 'https://image.tmdb.org/t/p/w500$path';
 String getMovieDetailsPath(int movieId) => getEndpoint('movie/$movieId');
+String searchPath = 'search/movie';
+String getSearchPath(String query) =>
+    '$baseUrl$searchPath?query=$query&api_key=$apiKey&language=$language&page=1';
 /*
-
+$baseUrl$endpoint?api_key=$apiKey&language=$language
+search/movie?query=spider
 https://api.themoviedb.org/3/movie/1216191?api_key=d7d4876a34ea0c4687d0e36a8feff39e&language=en-US&page=1
 */

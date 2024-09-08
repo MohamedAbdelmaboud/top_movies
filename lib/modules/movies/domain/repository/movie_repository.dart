@@ -17,4 +17,5 @@ abstract class MovieRepository {
   );
 // get cast
   Future<Either<Failure, List<Cast>>> getCast(int movieId);
+  Future<Either<Failure, List<Movie>>> searchMovies(String query);
 }

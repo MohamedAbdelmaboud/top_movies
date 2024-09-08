@@ -5,16 +5,23 @@ import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_styles.dart';
 
 class MovieDetailsWidget extends StatelessWidget {
-  const MovieDetailsWidget({super.key, required this.icon, required this.text});
+  const MovieDetailsWidget({
+    super.key,
+    required this.icon,
+    required this.text,
+    this.color = AppColors.greyColor,
+  });
   final IconData icon;
   final String text;
+  final Color color;
+
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         Icon(
           icon,
-          color: AppColors.greyColor,
+          color: color,
           size: 16,
           weight: 1,
         ),
@@ -22,7 +29,7 @@ class MovieDetailsWidget extends StatelessWidget {
         Text(
           text,
           style: AppStyles.semiBold12.copyWith(
-            color: AppColors.greyColor,
+            color: color,
           ),
         )
       ],

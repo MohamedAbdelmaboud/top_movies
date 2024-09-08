@@ -15,8 +15,8 @@ class MovieRepositoryImpl implements MovieRepository {
     required this.remoteDataSource,
   });
   @override
-  Future<Either<Failure, List<Movie>>> getNowPlayingMovies() async {
-    final result = await remoteDataSource.getNowPlayingMovies();
+  Future<Either<Failure, List<Movie>>> getNowPlayingMovies() {
+    final result = remoteDataSource.getNowPlayingMovies();
     return result;
   }
 
@@ -52,8 +52,14 @@ class MovieRepositoryImpl implements MovieRepository {
   }
 
   @override
-  Future<Either<Failure, List<Cast>>> getCast(int movieId) async {
-    final result = await remoteDataSource.getCast(movieId);
+  Future<Either<Failure, List<Cast>>> getCast(int movieId) {
+    final result = remoteDataSource.getCast(movieId);
+    return result;
+  }
+
+  @override
+  Future<Either<Failure, List<Movie>>> searchMovies(String query) {
+    final result = remoteDataSource.getSearchMovies(query);
     return result;
   }
 }
