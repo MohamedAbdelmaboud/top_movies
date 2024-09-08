@@ -19,7 +19,6 @@ class CastItem extends StatelessWidget {
         SizedBox(
           width: 250,
           child: Card(
-            
             color: AppColors.primaryColor.withOpacity(0.7),
             elevation: 10,
             shape: BeveledRectangleBorder(
@@ -29,8 +28,6 @@ class CastItem extends StatelessWidget {
               padding: const EdgeInsets.only(
                 left: 70,
                 right: 8.0,
-                top: 5.0,
-                bottom: 5.0,
               ),
               child: CastItemText(cast: cast),
             ),

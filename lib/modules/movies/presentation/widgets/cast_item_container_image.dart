@@ -14,11 +14,11 @@ class CastItemContainerImage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      top: -1,
+      top: -3.2,
       left: -2.8,
       child: Container(
-        width: 63,
-        height: 63,
+        width: 70,
+        height: 73,
         decoration: const BoxDecoration(
           shape: BoxShape.circle,
           border: GradientBoxBorder(

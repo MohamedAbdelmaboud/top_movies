@@ -11,7 +11,7 @@ void main() {
   runApp(
     DevicePreview(
       builder: (context) => const MyApp(),
-      enabled: !kReleaseMode,
+      enabled:false,
     ),
   );
 }

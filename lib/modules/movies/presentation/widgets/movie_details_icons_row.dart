@@ -5,6 +5,7 @@ import 'package:intl/intl.dart';
 import '../../../../core/helpers/show_duration.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../domain/entites/movie_details.dart';
+import 'movie_details_title.dart';
 import 'movie_details_widget.dart';
 
 class MovieDetailsIconsRow extends StatelessWidget {
@@ -25,6 +26,7 @@ class MovieDetailsIconsRow extends StatelessWidget {
           child: IntrinsicHeight(
             child: Column(
               children: [
+                MovieDetailsTitle(movie: movie),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

@@ -13,12 +13,14 @@ class CastItemText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: isArabic(cast.character)
+          ? CrossAxisAlignment.end
+          : CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
           cast.name,
-          style: AppStyles.bold12,
+          style: AppStyles.bold9,
         ),
         const Gap(2),
         ConstrainedBox(
@@ -27,12 +29,24 @@ class CastItemText extends StatelessWidget {
           ),
           child: Text(
             cast.character,
-            style: AppStyles.regular12.copyWith(),
+            style: AppStyles.bold9.copyWith(
+              color: Colors.white.withOpacity(0.8),
+              fontFamily: isArabic(cast.character) ? 'Cairo' : null,
+              fontSize: isArabic(cast.character) ? 12 : null,
+            ),
             maxLines: 1,
             overflow: TextOverflow.ellipsis,
+            textDirection: isArabic(cast.character)
+                ? TextDirection.rtl
+                : TextDirection.ltr,
           ),
         ),
       ],
     );
   }
+}
+
+bool isArabic(String text) {
+  final arabicRegExp = RegExp(r'[\u0600-\u06FF]');
+  return arabicRegExp.hasMatch(text);
 }

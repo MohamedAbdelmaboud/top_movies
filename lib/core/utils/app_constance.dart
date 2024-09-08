@@ -14,11 +14,14 @@ String upcomingMovies = getEndpoint('movie/upcoming');
 String getMoviesRecommendationsPath(int movieId) =>
     getEndpoint('movie/$movieId/recommendations');
 String getCastPath(int movieId) => getEndpoint('movie/$movieId/credits');
-String getImageUrl(String path) => 'https://image.tmdb.org/t/p/w500$path';
+String getImageUrl(String? path) => 'https://image.tmdb.org/t/p/w500$path';
 String getMovieDetailsPath(int movieId) => getEndpoint('movie/$movieId');
 String searchPath = 'search/movie';
 String getSearchPath(String query) =>
     '$baseUrl$searchPath?query=$query&api_key=$apiKey&language=$language&page=1';
+
+String defaultImage =
+    'https://motivatevalmorgan.com/wp-content/uploads/2016/06/default-movie-768x1129.jpg';
 /*
 $baseUrl$endpoint?api_key=$apiKey&language=$language
 search/movie?query=spider

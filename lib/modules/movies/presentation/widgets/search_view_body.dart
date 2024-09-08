@@ -5,6 +5,7 @@ import '../controller/search_bloc/search_bloc.dart';
 import 'custom_search_field.dart';
 import 'no_search_body.dart';
 import 'search_body_loaded.dart';
+import 'search_loading_body.dart';
 
 class SearchViewBody extends StatelessWidget {
   const SearchViewBody({
@@ -27,11 +28,13 @@ class SearchViewBody extends StatelessWidget {
               builder: (context, state) {
                 switch (state.runtimeType) {
                   case const (SearchLoading):
-                    return const Center(
-                      child: CircularProgressIndicator(),
-                    );
+                    return const SearchLoadingBody();
                   case const (SearchSuccess):
                     final successState = state as SearchSuccess;
+                    if (successState.movies.isEmpty) {
+                      return const NoSearchBody();
+                    }
+
                     return SearchBodyLoaded(
                       movies: successState.movies,
                     );
@@ -42,6 +45,7 @@ class SearchViewBody extends StatelessWidget {
                         failureState.message,
                       ),
                     );
+
                   default:
                     return const NoSearchBody();
                 }

@@ -6,7 +6,7 @@ class CustomShaderMask extends StatelessWidget {
     super.key,
     required this.posterPath,
   });
-  final String posterPath;
+  final String? posterPath;
 
   @override
   Widget build(BuildContext context) {

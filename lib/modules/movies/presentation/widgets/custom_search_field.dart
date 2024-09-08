@@ -13,6 +13,7 @@ class CustomSearchField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       onChanged: onChanged,
+      style: AppStyles.regular14,
       decoration: InputDecoration(
         border: const GradientOutlineInputBorder(
           gradient: LinearGradient(

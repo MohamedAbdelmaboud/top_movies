@@ -6,7 +6,7 @@ import 'movie_loading_shimmer.dart';
 
 class MovieUpcomingImage extends StatelessWidget {
   const MovieUpcomingImage({super.key, required this.imagePath});
-  final String imagePath;
+  final String? imagePath;
   @override
   Widget build(BuildContext context) {
     return ClipRRect(

@@ -89,9 +89,9 @@ flutter:
       fonts:
         - asset: assets/fonts/Montserrat-Regular.ttf
 
-    - family: Ubuntu
+    - family: Cairo
       fonts:
-        - asset: assets/fonts/Ubuntu-Regular.ttf
+        - asset: assets/fonts/Cairo-Regular.ttf
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf

@@ -1,9 +1,9 @@
-import '../../../../core/routing/app_router.dart';
-import '../../../../core/test/dummy.dart';
-import '../../domain/entites/movie.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 import 'package:go_router/go_router.dart';
+
+import '../../../../core/routing/app_router.dart';
+import '../../domain/entites/movie.dart';
 import 'search_item.dart';
 
 class SearchBodyLoaded extends StatelessWidget {
@@ -21,7 +21,7 @@ class SearchBodyLoaded extends StatelessWidget {
           final movie = movies[index];
           return InkWell(
             onTap: () {
-              context.push(AppRouter.movieDetails, extra: moviesList[index].id);
+              context.push(AppRouter.movieDetails, extra: movie.id);
             },
             child: SearchItem(movie: movie),
           );

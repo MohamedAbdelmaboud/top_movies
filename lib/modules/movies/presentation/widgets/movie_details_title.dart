@@ -15,10 +15,11 @@ class MovieDetailsTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SliverToBoxAdapter(
-      child: FadeInUp(
-        from: 20,
-        duration: const Duration(milliseconds: 500),
+    return FadeInUp(
+      from: 20,
+      duration: const Duration(milliseconds: 500),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
             Text(
@@ -26,7 +27,7 @@ class MovieDetailsTitle extends StatelessWidget {
               style: AppStyles.bold14,
               textAlign: TextAlign.center,
             ),
-            const Gap(8),
+            const Gap(5),
             Text(
               movie.tagline,
               style: AppStyles.bold9,

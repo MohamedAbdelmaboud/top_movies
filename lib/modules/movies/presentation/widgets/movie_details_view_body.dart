@@ -9,7 +9,6 @@ import 'more_like_this_widget.dart';
 import 'movie_details_icons_row.dart';
 import 'movie_details_over_view.dart';
 import 'movie_details_stack.dart';
-import 'movie_details_title.dart';
 import 'recommended_movies_sliver_grid.dart';
 
 class MovieDetailsViewBody extends StatelessWidget {
@@ -29,10 +28,9 @@ class MovieDetailsViewBody extends StatelessWidget {
       key: const Key('movieDetailScrollView'),
       slivers: [
         MovieDetailsStack(movie: movie),
-        const SliverToBoxAdapter(
-          child: Gap(40),
+        SliverToBoxAdapter(
+          child: Gap(MediaQuery.sizeOf(context).height * 0.05),
         ),
-        MovieDetailsTitle(movie: movie),
         MovieDetailsIconsRow(movie: movie),
         // const BudgetWidget(),
         MovieDetailsOverView(movie: movie),
@@ -54,7 +52,7 @@ class MovieDetailsViewBody extends StatelessWidget {
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               mainAxisSpacing: 12.0,
               crossAxisSpacing: 12.0,
-              childAspectRatio: 2.2,
+              childAspectRatio: 2,
               crossAxisCount: 2,
             ),
           ),

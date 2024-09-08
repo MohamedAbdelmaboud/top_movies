@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gradient_borders/gradient_borders.dart';
 
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_images.dart';
@@ -30,7 +31,7 @@ class _HomeViewState extends State<HomeView> {
   final pages = [
     const HomeViewBody(),
     BlocProvider(
-        lazy: false,
+      lazy: false,
       create: (context) => SearchBloc(
         getIt<GetSearchMoviesUseCase>(),
       ),
@@ -47,11 +48,14 @@ class _HomeViewState extends State<HomeView> {
       body: pages[currentSelectedIndex],
       bottomNavigationBar: Container(
         decoration: const BoxDecoration(
-          border: Border(
-            top: BorderSide(
-              color: AppColors.primaryColor,
-              width: 3.0, // Thickness of the border
+          border: GradientBoxBorder(
+            gradient: LinearGradient(
+              colors: [
+                Color(0xff7D4199),
+                Color(0xff19A1BE),
+              ],
             ),
+            width: 2,
           ),
         ),
         child: BottomNavigationBar(
