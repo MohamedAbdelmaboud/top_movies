@@ -28,7 +28,7 @@ class CastItemContainerImage extends StatelessWidget {
                 Color(0xff7D4199),
               ],
             ),
-            width: 2.5,
+            width: 4,
           ),
           color: Color(0xFF5D5D5D),
         ),

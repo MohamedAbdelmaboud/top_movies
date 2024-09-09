@@ -1,9 +1,9 @@
-import '../../domain/entites/movie.dart';
 import 'package:flutter/material.dart';
+
+import '../../domain/entites/movie.dart';
 import 'search_item_over_view.dart';
 import 'search_item_rate.dart';
 import 'search_item_title.dart';
-import 'search_view_body.dart';
 
 class SearchItemRightSide extends StatelessWidget {
   const SearchItemRightSide({

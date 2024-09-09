@@ -4,10 +4,12 @@ import 'package:dio/dio.dart';
 import '../../../../core/error/failures.dart';
 import '../../../../core/utils/app_constance.dart';
 import '../../domain/entites/cast.dart';
+import '../../domain/entites/trailer.dart';
 import '../models/cast_model.dart';
 import '../models/movie_details_model.dart';
 import '../models/movie_model.dart';
 import '../models/recommendation_model.dart';
+import '../models/trailer_model.dart';
 
 abstract class BaseRemoteDataSource {
   Future<Either<Failure, List<MovieModel>>> getNowPlayingMovies();
@@ -19,6 +21,7 @@ abstract class BaseRemoteDataSource {
     int movieId,
   );
   Future<Either<Failure, List<Cast>>> getCast(int movieId);
+  Future<Either<Failure, List<Trailer>>> getTrailer(int movieId);
   Future<Either<Failure, List<MovieModel>>> getSearchMovies(String query);
 }
 
@@ -166,6 +169,24 @@ class MovieRemoteDataSource implements BaseRemoteDataSource {
       );
 
       return right(moviesSearchList);
+    } on DioException catch (e) {
+      return left(ServerFailure.fromDioException(e));
+    }
+  }
+
+  @override
+  Future<Either<Failure, List<Trailer>>> getTrailer(int movieId) async {
+    try {
+      Response response = await dio.get(
+        getTrailerPath(movieId),
+      );
+      List<dynamic> json = response.data['results'];
+
+      List<Trailer> trailers = List.generate(
+        json.length,
+        (index) => TrailerModel.fromJson(json[index]),
+      );
+      return right(trailers);
     } on DioException catch (e) {
       return left(ServerFailure.fromDioException(e));
     }

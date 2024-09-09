@@ -3,14 +3,17 @@ import 'package:go_router/go_router.dart';
 
 import '../../modules/auth/presentation/view/login_view.dart';
 import '../../modules/auth/presentation/view/sign_up_view.dart';
+import '../../modules/movies/domain/usecases/get_cast_use_case.dart';
 import '../../modules/movies/domain/usecases/get_movie_details_use_case.dart';
 import '../../modules/movies/domain/usecases/get_now_playing_movies_use_case.dart';
 import '../../modules/movies/domain/usecases/get_popular_movies_use_case.dart';
 import '../../modules/movies/domain/usecases/get_recommendation_movies_use_case.dart';
 import '../../modules/movies/domain/usecases/get_top_rated_movies_use_case.dart';
+import '../../modules/movies/domain/usecases/get_trailer_use_case.dart';
 import '../../modules/movies/domain/usecases/get_upcoming_movies_use_case.dart';
 import '../../modules/movies/presentation/controller/movies_bloc/movies_bloc.dart';
 import '../../modules/movies/presentation/controller/movies_details_bloc/movies_details_bloc.dart';
+import '../../modules/movies/presentation/controller/trailer_bloc/trailer_bloc.dart';
 import '../../modules/movies/presentation/views/home_view.dart';
 import '../../modules/movies/presentation/views/movies_details_view.dart';
 import '../../modules/movies/presentation/views/search_view.dart';
@@ -37,20 +40,31 @@ class AppRouter {
       ),
       GoRoute(
         path: movieDetails,
-        builder: (context, state) => BlocProvider(
-          // lazy: false,
-          create: (context) => MoviesDetailsBloc(
-            getIt<GetMovieDetailsUseCase>(),
-            getIt<GetRecommendationMoviesUseCase>(),
-            getIt<GetCastUseCase>(),
-          )
-            ..add(
-              GetMoviesDetailsEvent(state.extra as int),
-            )
-            ..add(
-              GetMoviesRecommendationsEvent(state.extra as int),
-            )
-            ..add(GetCastEvent(state.extra as int)),
+        builder: (context, state) => MultiBlocProvider(
+          providers: [
+            BlocProvider(
+              // lazy: false,
+              create: (context) => MoviesDetailsBloc(
+                getIt<GetMovieDetailsUseCase>(),
+                getIt<GetRecommendationMoviesUseCase>(),
+                getIt<GetCastUseCase>(),
+              )
+                ..add(
+                  GetMoviesDetailsEvent(state.extra as int),
+                )
+                ..add(
+                  GetMoviesRecommendationsEvent(state.extra as int),
+                )
+                ..add(GetCastEvent(state.extra as int)),
+            ),
+            BlocProvider(
+              create: (context) => TrailerBloc(
+                getIt<GetTrailerUseCase>(),
+              )..add(
+                  GetTrailerEvent(state.extra as int),
+                ),
+            ),
+          ],
           child: const MoviesDetailView(),
         ),
       ),

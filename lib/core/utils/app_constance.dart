@@ -16,6 +16,8 @@ String getMoviesRecommendationsPath(int movieId) =>
 String getCastPath(int movieId) => getEndpoint('movie/$movieId/credits');
 String getImageUrl(String? path) => 'https://image.tmdb.org/t/p/w500$path';
 String getMovieDetailsPath(int movieId) => getEndpoint('movie/$movieId');
+String getTrailerPath(int movieId) => getEndpoint('movie/$movieId/videos');
+
 String searchPath = 'search/movie';
 String getSearchPath(String query) =>
     '$baseUrl$searchPath?query=$query&api_key=$apiKey&language=$language&page=1';

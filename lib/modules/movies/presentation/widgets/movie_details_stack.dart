@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../domain/entites/movie_details.dart';
+import 'budget_widget.dart';
 import 'movie_detail_rate_widget.dart';
 import 'movie_details_image.dart';
 import 'movie_details_image_cover.dart';
@@ -22,6 +23,9 @@ class MovieDetailsStack extends StatelessWidget {
           alignment: Alignment.bottomLeft,
           children: [
             MovieDetailsImageCover(movie: movie),
+            BudgetWidget(
+              movieId: movie.id,
+            ),
             MovieDetailsImage(movie: movie),
             MovieDetailRateWidget(movie: movie),
           ],

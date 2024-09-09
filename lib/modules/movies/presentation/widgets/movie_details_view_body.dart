@@ -4,6 +4,7 @@ import 'package:gap/gap.dart';
 import '../../domain/entites/cast.dart';
 import '../../domain/entites/movie_details.dart';
 import '../../domain/entites/recommendation.dart';
+import 'budget_widget.dart';
 import 'cast_item.dart';
 import 'more_like_this_widget.dart';
 import 'movie_details_icons_row.dart';
@@ -32,7 +33,6 @@ class MovieDetailsViewBody extends StatelessWidget {
           child: Gap(MediaQuery.sizeOf(context).height * 0.05),
         ),
         MovieDetailsIconsRow(movie: movie),
-        // const BudgetWidget(),
         MovieDetailsOverView(movie: movie),
         const SliverToBoxAdapter(
           child: Gap(18),

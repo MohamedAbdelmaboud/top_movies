@@ -6,6 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../domain/entites/cast.dart';
 import '../../../domain/entites/movie_details.dart';
 import '../../../domain/entites/recommendation.dart';
+import '../../../domain/usecases/get_cast_use_case.dart';
 import '../../../domain/usecases/get_movie_details_use_case.dart';
 import '../../../domain/usecases/get_recommendation_movies_use_case.dart';
 import '../movies_bloc/movies_bloc.dart';

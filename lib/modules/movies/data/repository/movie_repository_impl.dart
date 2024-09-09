@@ -5,6 +5,7 @@ import '../../domain/entites/cast.dart';
 import '../../domain/entites/movie.dart';
 import '../../domain/entites/movie_details.dart';
 import '../../domain/entites/recommendation.dart';
+import '../../domain/entites/trailer.dart';
 import '../../domain/repository/movie_repository.dart';
 import '../datasource/movie_remote_data_source.dart';
 
@@ -60,6 +61,12 @@ class MovieRepositoryImpl implements MovieRepository {
   @override
   Future<Either<Failure, List<Movie>>> searchMovies(String query) {
     final result = remoteDataSource.getSearchMovies(query);
+    return result;
+  }
+
+  @override
+  Future<Either<Failure, List<Trailer>>> getTrailer(int movieId) {
+    final result = remoteDataSource.getTrailer(movieId);
     return result;
   }
 }

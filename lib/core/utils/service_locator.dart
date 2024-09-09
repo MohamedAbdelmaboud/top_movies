@@ -4,12 +4,14 @@ import 'package:get_it/get_it.dart';
 import '../../modules/movies/data/datasource/movie_remote_data_source.dart';
 import '../../modules/movies/data/repository/movie_repository_impl.dart';
 import '../../modules/movies/domain/repository/movie_repository.dart';
+import '../../modules/movies/domain/usecases/get_cast_use_case.dart';
 import '../../modules/movies/domain/usecases/get_movie_details_use_case.dart';
 import '../../modules/movies/domain/usecases/get_now_playing_movies_use_case.dart';
 import '../../modules/movies/domain/usecases/get_popular_movies_use_case.dart';
 import '../../modules/movies/domain/usecases/get_recommendation_movies_use_case.dart';
 import '../../modules/movies/domain/usecases/get_search_movies_use_case.dart';
 import '../../modules/movies/domain/usecases/get_top_rated_movies_use_case.dart';
+import '../../modules/movies/domain/usecases/get_trailer_use_case.dart';
 import '../../modules/movies/domain/usecases/get_upcoming_movies_use_case.dart';
 
 final getIt = GetIt.instance;
@@ -63,6 +65,12 @@ void setup() {
   // register saerch
   getIt.registerSingleton<GetSearchMoviesUseCase>(
     GetSearchMoviesUseCase(
+      movieRepository: getIt<MovieRepository>(),
+    ),
+  );
+  //GetTrailerUseCase
+  getIt.registerSingleton<GetTrailerUseCase>(
+    GetTrailerUseCase(
       movieRepository: getIt<MovieRepository>(),
     ),
   );
