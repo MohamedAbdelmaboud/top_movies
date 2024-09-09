@@ -4,8 +4,7 @@ import 'package:gap/gap.dart';
 import '../../domain/entites/cast.dart';
 import '../../domain/entites/movie_details.dart';
 import '../../domain/entites/recommendation.dart';
-import 'budget_widget.dart';
-import 'cast_item.dart';
+import 'cast_members_sliver_grid.dart';
 import 'more_like_this_widget.dart';
 import 'movie_details_icons_row.dart';
 import 'movie_details_over_view.dart';
@@ -38,25 +37,7 @@ class MovieDetailsViewBody extends StatelessWidget {
           child: Gap(18),
         ),
         // const CastItem(),
-        SliverPadding(
-          padding: const EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 16.0),
-          sliver: SliverGrid(
-            delegate: SliverChildBuilderDelegate(
-              (context, index) {
-                return CastItem(
-                  cast: castMembers[index],
-                );
-              },
-              childCount: 4,
-            ),
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              mainAxisSpacing: 12.0,
-              crossAxisSpacing: 12.0,
-              childAspectRatio: 2,
-              crossAxisCount: 2,
-            ),
-          ),
-        ),
+        CastMembersSliverGrid(castMembers: castMembers),
         const MoreLikeThisWidget(),
         RecommendedMoviesSliverGrid(recommendations: recommendations),
       ],

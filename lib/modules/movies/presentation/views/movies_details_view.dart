@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:loading_animation_widget/loading_animation_widget.dart';
 
 import '../controller/movies_bloc/movies_bloc.dart';
 import '../controller/movies_details_bloc/movies_details_bloc.dart';
+import '../widgets/movie_details_loading.dart';
 import '../widgets/movie_details_view_body.dart';
 
 class MoviesDetailView extends StatelessWidget {
@@ -16,14 +16,9 @@ class MoviesDetailView extends StatelessWidget {
     return Scaffold(
       body: BlocBuilder<MoviesDetailsBloc, MoviesDetailsState>(
         builder: (context, state) {
-          if (state.detailsStatus == MoviesStatus.loading||
+          if (state.detailsStatus == MoviesStatus.loading ||
               state.castStatus == MoviesStatus.loading) {
-            return Center(
-              child: LoadingAnimationWidget.discreteCircle(
-                color: Colors.white,
-                size: 50,
-              ),
-            );
+            return const MovieDetailsLoading();
           } else if (state.detailsStatus == MoviesStatus.error) {
             return Center(
               child: Text(state.detailsErrorMessage),

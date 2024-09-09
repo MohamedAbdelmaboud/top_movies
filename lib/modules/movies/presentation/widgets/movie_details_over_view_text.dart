@@ -1,8 +1,9 @@
+import 'package:animate_do/animate_do.dart';
+import 'package:flutter/material.dart';
+
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_styles.dart';
 import '../../domain/entites/movie_details.dart';
-import 'package:animate_do/animate_do.dart';
-import 'package:flutter/material.dart';
 
 class MovieDetailsOverViewText extends StatelessWidget {
   const MovieDetailsOverViewText({

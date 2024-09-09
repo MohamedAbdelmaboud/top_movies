@@ -275,6 +275,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_spinkit:
+    dependency: "direct main"
+    description:
+      name: flutter_spinkit
+      sha256: d2696eed13732831414595b98863260e33e8882fc069ee80ec35d4ac9ddb0472
+      url: "https://pub.dev"
+    source: hosted
+    version: "5.2.1"
   flutter_svg:
     dependency: "direct main"
     description:
@@ -445,6 +453,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.11.1"
+  measure_size:
+    dependency: transitive
+    description:
+      name: measure_size
+      sha256: "5faef74474db7bbcd8c6f301d8a09abc69b8e999b85167825e532f1a55c38ae6"
+      url: "https://pub.dev"
+    source: hosted
+    version: "4.0.0"
   meta:
     dependency: transitive
     description:
@@ -573,6 +589,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "6.1.2"
+  redacted:
+    dependency: "direct main"
+    description:
+      name: redacted
+      sha256: ded039571fd4da1363f48344c61719084b9d5336c7c5d71e2264bf67cf366881
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.12"
   rxdart:
     dependency: transitive
     description:
