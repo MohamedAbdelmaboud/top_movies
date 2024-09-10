@@ -1,13 +1,19 @@
 import 'package:device_preview/device_preview.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import 'core/routing/app_router.dart';
 import 'core/utils/app_colors.dart';
 import 'core/utils/service_locator.dart';
+import 'firebase_options.dart';
 
-void main() {
+void main() async {
   setup();
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   runApp(
     DevicePreview(
       builder: (context) => const MyApp(),

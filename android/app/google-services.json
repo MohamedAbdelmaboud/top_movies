@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "920632069583",
+    "project_id": "top-movies-c15de",
+    "storage_bucket": "top-movies-c15de.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:920632069583:android:43e7901b8870913e9e56ba",
+        "android_client_info": {
+          "package_name": "com.example.top_movies"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCepC02vLniJuDEeXfCpRPUUScPj6Otgrw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

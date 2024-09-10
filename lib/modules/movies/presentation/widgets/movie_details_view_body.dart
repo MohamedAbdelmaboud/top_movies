@@ -10,7 +10,7 @@ import 'movie_details_icons_row.dart';
 import 'movie_details_over_view.dart';
 import 'movie_details_stack.dart';
 import 'recommended_movies_sliver_grid.dart';
-
+  
 class MovieDetailsViewBody extends StatelessWidget {
   final MovieDetails movie;
   final List<Recommendation> recommendations;

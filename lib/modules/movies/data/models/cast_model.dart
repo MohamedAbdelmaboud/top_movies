@@ -1,7 +1,7 @@
 import '../../domain/entites/cast.dart';
 
 class CastModel extends Cast {
-  CastModel({
+  const CastModel({
     required super.name,
     required super.character,
     super.profilePath,
