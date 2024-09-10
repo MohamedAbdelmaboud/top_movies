@@ -1,13 +1,13 @@
 import 'package:equatable/equatable.dart';
 
 class ErrorMessageModel extends Equatable {
-  final bool success;
-  final int statusCode;
+  final bool? success;
+  final int? statusCode;
   final String statusMessage;
 
   const ErrorMessageModel({
-    required this.success,
-    required this.statusCode,
+     this.success,
+     this.statusCode,
     required this.statusMessage,
   });
 

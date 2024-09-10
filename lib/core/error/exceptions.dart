@@ -1,9 +1,9 @@
 import 'error_message_model.dart';
 
-class CustomException implements Exception {
+class CustomAuthException implements Exception {
   final ErrorMessageModel errorMessageModel;
 
-  CustomException({
+  CustomAuthException({
     required this.errorMessageModel,
   });
   @override
