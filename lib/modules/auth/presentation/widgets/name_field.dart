@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../../../core/utils/validator_helper.dart';
 import '../controller/sign_up_cubit/sign_up_cubit.dart';
@@ -23,8 +24,11 @@ class SignUpNameField extends StatelessWidget {
           hintText: 'Enter your name',
           keyboardType: TextInputType.emailAddress,
           validator: ValidatorHelper.validateName,
-          onSaved: (value) {
+          onSaved: (value) async{
             SignUpCubit.get(context).name = value!;
+            await SharedPreferences.getInstance().then((prefs) {
+              prefs.setString('name', value);
+            });
           },
         ),
       ],

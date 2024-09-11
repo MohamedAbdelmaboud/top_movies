@@ -1,8 +1,9 @@
-import '../controller/sign_up_cubit/sign_up_cubit.dart';
-import 'name_field.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gap/gap.dart';
+
+import '../controller/sign_up_cubit/sign_up_cubit.dart';
+import 'name_field.dart';
 import 'sign_up_email_field.dart';
 import 'sign_up_password_field.dart';
 
@@ -23,6 +24,7 @@ class SignUpForm extends StatelessWidget {
               SignUpNameField(),
               Gap(16),
               SignUpEmailField(),
+              Gap(16),
               SignUpPasswordField(),
               Gap(16),
             ],

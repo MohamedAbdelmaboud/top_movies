@@ -20,6 +20,7 @@ import '../../modules/movies/presentation/controller/movies_details_bloc/movies_
 import '../../modules/movies/presentation/controller/trailer_bloc/trailer_bloc.dart';
 import '../../modules/movies/presentation/views/home_view.dart';
 import '../../modules/movies/presentation/views/movies_details_view.dart';
+import '../../modules/movies/presentation/views/profile_view.dart';
 import '../../modules/movies/presentation/views/search_view.dart';
 import '../../modules/movies/presentation/views/upcoming_view.dart';
 import '../../modules/onboarding/presentation/views/onboarding_view.dart';
@@ -38,6 +39,11 @@ class AppRouter {
   static const String search = '/search';
   static final router = GoRouter(
     routes: [
+      // profile
+      GoRoute(
+        path: profile,
+        builder: (context, state) => const ProfileView(),
+      ),
       GoRoute(
         path: search,
         builder: (context, state) => const SearchView(),

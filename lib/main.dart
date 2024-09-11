@@ -29,7 +29,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(scaffoldBackgroundColor: AppColors.scaffoldBg),
+      theme: ThemeData(
+        scaffoldBackgroundColor: AppColors.scaffoldBg,
+        textSelectionTheme: TextSelectionThemeData(
+          cursorColor: AppColors.primaryColor,
+          selectionColor: AppColors.primaryColor.withOpacity(0.3),
+          selectionHandleColor: AppColors.primaryColor,
+        ),
+      ),
       routerConfig: AppRouter.router,
       title: 'Top Movies',
     );
