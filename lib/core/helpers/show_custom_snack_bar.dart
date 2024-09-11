@@ -15,7 +15,7 @@ void showCustomSnackBar(
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10),
       ),
-      elevation: 10,
+      elevation: 15,
       behavior: SnackBarBehavior.floating,
       backgroundColor:
           isError ? Colors.red : AppColors.primaryColor.withOpacity(0.6),

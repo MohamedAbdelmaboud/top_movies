@@ -1,3 +1,5 @@
+// ignore_for_file: invalid_use_of_visible_for_testing_member
+
 import 'dart:async';
 
 import 'package:equatable/equatable.dart';
@@ -26,7 +28,9 @@ class SignInBloc extends Bloc<SignInEvent, SignInState> {
   FutureOr<void> _signInWithEmailMethod(
       SignInWithEmailAndPasswordEvent event, Emitter<SignInState> emit) async {
     if (_formNotValid()) return;
+
     emit(SignInLoading());
+
     final result = await signInUseCase.execute(email, password);
     result.fold(
       (failure) => emit(SignInFailure(message: failure.errorMessage)),
@@ -37,11 +41,10 @@ class SignInBloc extends Bloc<SignInEvent, SignInState> {
   bool _formNotValid() {
     if (!key.currentState!.validate()) {
       autovalidateMode = AutovalidateMode.always;
-      // emit(SignInInitial());
+      emit(SignInInitial());
       return true;
     }
     key.currentState!.save();
-
     return false;
   }
 }

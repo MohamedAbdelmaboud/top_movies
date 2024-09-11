@@ -6,8 +6,8 @@ import '../controller/sign_up_cubit/sign_up_cubit.dart';
 import 'custom_align.dart';
 import 'custom_text_form_field.dart';
 
-class NameField extends StatelessWidget {
-  const NameField({
+class SignUpNameField extends StatelessWidget {
+  const SignUpNameField({
     super.key,
   });
 
@@ -24,7 +24,7 @@ class NameField extends StatelessWidget {
           keyboardType: TextInputType.emailAddress,
           validator: ValidatorHelper.validateName,
           onSaved: (value) {
-          SignUpCubit.get(context).name = value!;
+            SignUpCubit.get(context).name = value!;
           },
         ),
       ],
