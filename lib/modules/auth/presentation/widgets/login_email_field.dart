@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
-import '../../../../core/utils/app_styles.dart';
 import '../../../../core/utils/validator_helper.dart';
+import '../controller/bloc/sign_in_bloc/sign_in_bloc.dart';
+import 'custom_align.dart';
 import 'custom_text_form_field.dart';
 
 class LoginEmailField extends StatelessWidget {
@@ -23,28 +24,10 @@ class LoginEmailField extends StatelessWidget {
           keyboardType: TextInputType.emailAddress,
           validator: ValidatorHelper.validateEmail,
           onSaved: (value) {
-            // SignInCubit.get(context).email = value!;
+            SignInBloc.get(context).email = value!;
           },
         ),
       ],
-    );
-  }
-}
-
-class CustomAlign extends StatelessWidget {
-  const CustomAlign({
-    super.key,
-    required this.text,
-  });
-  final String text;
-  @override
-  Widget build(BuildContext context) {
-    return Align(
-      alignment: Alignment.centerLeft,
-      child: Text(
-        text,
-        style: AppStyles.regular13.copyWith(),
-      ),
     );
   }
 }

@@ -10,7 +10,7 @@ class SignInUseCase {
   SignInUseCase({
     required this.authRepo,
   });
-  Future<Either<Failure, UserEntity>> excute(
+  Future<Either<Failure, UserEntity>> execute(
     String email,
     String password,
   ) async {

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../core/widgets/custom_button.dart';
-import '../../../../core/routing/app_router.dart';
+import '../controller/bloc/sign_in_bloc/sign_in_bloc.dart';
 
 class LoginButton extends StatelessWidget {
   const LoginButton({
@@ -11,13 +11,18 @@ class LoginButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomButton(
-      // isLoading: SignInCubit.get(context).state is SignInLoading,
-      onPressed: () {
-        // SignInCubit.get(context).signInWithEmailAndPassword();
-        context.push(AppRouter.home);
+    return BlocBuilder<SignInBloc, SignInState>(
+      builder: (context, state) {
+        return CustomButton(
+          isLoading: SignInBloc.get(context).state is SignInLoading,
+          onPressed: () {
+            SignInBloc.get(context).add(
+              SignInWithEmailAndPasswordEvent(),
+            );
+          },
+          text: 'Login',
+        );
       },
-      text: 'Login',
     );
   }
 }

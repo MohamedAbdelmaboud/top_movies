@@ -18,14 +18,7 @@ abstract class BaseFirebaseAuthRemoteDataSource {
   Future<void> signOut();
 }
 
-class FirebaseAuthRemoteDataSource
-    implements BaseFirebaseAuthRemoteDataSource {
-  final FirebaseAuth firebaseAuth;
-
-  FirebaseAuthRemoteDataSource({
-    required this.firebaseAuth,
-  });
-
+class FirebaseAuthRemoteDataSource implements BaseFirebaseAuthRemoteDataSource {
   @override
   Future<User> signInWithEmailAndPassword(
       {required String email, required String password}) async {

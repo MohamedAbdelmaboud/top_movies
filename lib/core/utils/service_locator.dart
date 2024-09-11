@@ -1,6 +1,11 @@
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 
+import '../../modules/auth/data/datasource/firebase_auth_remote_data_source.dart';
+import '../../modules/auth/data/repository/auth_repo_impl.dart';
+import '../../modules/auth/domain/repository/auth_repo.dart';
+import '../../modules/auth/domain/usecases/sign_in_use_case.dart';
+import '../../modules/auth/domain/usecases/sign_up_use_case.dart';
 import '../../modules/movies/data/datasource/movie_remote_data_source.dart';
 import '../../modules/movies/data/repository/movie_repository_impl.dart';
 import '../../modules/movies/domain/repository/movie_repository.dart';
@@ -72,6 +77,29 @@ void setup() {
   getIt.registerSingleton<GetTrailerUseCase>(
     GetTrailerUseCase(
       movieRepository: getIt<MovieRepository>(),
+    ),
+  );
+  // authntication ************* ♥
+
+  //sign in
+  //sign up
+  getIt.registerSingleton<BaseFirebaseAuthRemoteDataSource>(
+    FirebaseAuthRemoteDataSource(),
+  );
+  getIt.registerSingleton<AuthRepo>(
+    AuthRepoImpl(
+      baseFirebaseAuthRemoteDataSource:
+          getIt<BaseFirebaseAuthRemoteDataSource>(),
+    ),
+  );
+  getIt.registerSingleton<SignInUseCase>(
+    SignInUseCase(
+      authRepo: getIt<AuthRepo>(),
+    ),
+  );
+  getIt.registerSingleton<SignUpUseCase>(
+    SignUpUseCase(
+      authRepo: getIt<AuthRepo>(),
     ),
   );
 }

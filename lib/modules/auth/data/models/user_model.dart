@@ -6,7 +6,7 @@ class UserModel extends UserEntity {
   const UserModel({
     required super.id,
     required super.email,
-    required super.name,
+    super.name,
     super.photoUrl,
   });
   // fromfirebaseUser
@@ -14,7 +14,7 @@ class UserModel extends UserEntity {
     return UserModel(
       id: user.uid,
       email: user.email!,
-      name: user.displayName!,
+      name: user.displayName,
       photoUrl: user.photoURL,
     );
   }

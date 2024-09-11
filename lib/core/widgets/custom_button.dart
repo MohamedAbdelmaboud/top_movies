@@ -21,32 +21,43 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: isButtonEnabled ? onPressed : null,
-      child: Container(
-        clipBehavior: Clip.none,
-
-        height: 54, // decrease the height to 55 or font size to 16
-        decoration: BoxDecoration(
-          gradient: const LinearGradient(
-            colors: [
-              Color(0xff00eaff),
-              Color(0xff0377ff),
-            ],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
+      child: Opacity(
+        opacity: isButtonEnabled ? 1 : 0.5,
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 500),
+          height: 56,
+          decoration: BoxDecoration(
+            gradient: isButtonEnabled
+                ? const LinearGradient(
+                    colors: [
+                      Color(0xff00eaff),
+                      Color(0xff0377ff),
+                    ],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  )
+                : LinearGradient(
+                    colors: [
+                      const Color(0xff00eaff).withOpacity(0.5),
+                      const Color(0xff0377ff).withOpacity(0.5),
+                    ],
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                  ),
+            borderRadius: BorderRadius.circular(8),
           ),
-          borderRadius: BorderRadius.circular(8),
-        ),
-        padding: const EdgeInsets.symmetric(vertical: 15),
-        child: Center(
-          child: isLoading
-              ? LoadingAnimationWidget.threeArchedCircle(
-                  color: Colors.white,
-                  size: 25,
-                )
-              : Text(
-                  text,
-                  style: AppStyles.bold16.copyWith(color: Colors.white),
-                ),
+          padding: const EdgeInsets.symmetric(vertical: 15),
+          child: Center(
+            child: isLoading
+                ? LoadingAnimationWidget.threeArchedCircle(
+                    color: Colors.white,
+                    size: 25,
+                  )
+                : Text(
+                    text,
+                    style: AppStyles.bold16.copyWith(color: Colors.white),
+                  ),
+          ),
         ),
       ),
     );

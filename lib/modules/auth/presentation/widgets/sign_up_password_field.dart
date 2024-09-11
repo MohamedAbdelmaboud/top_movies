@@ -3,8 +3,9 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:gap/gap.dart';
 
 import '../../../../../core/utils/validator_helper.dart';
+import '../controller/sign_up_cubit/sign_up_cubit.dart';
+import 'custom_align.dart';
 import 'custom_text_form_field.dart';
-import 'login_email_field.dart';
 
 class SignUpPasswordField extends HookWidget {
   const SignUpPasswordField({
@@ -23,7 +24,6 @@ class SignUpPasswordField extends HookWidget {
         const Gap(5),
         CustomTextFormField(
           hintText: 'Enter your password',
-          
           obscureText: isVisible.value,
           validator: ValidatorHelper.validatePassword,
           keyboardType: TextInputType.visiblePassword,
@@ -39,7 +39,7 @@ class SignUpPasswordField extends HookWidget {
             ),
           ),
           onSaved: (value) {
-            // SignUpCubit.get(context).password = value!;
+            SignUpCubit.get(context).password = value!;
           },
         ),
       ],

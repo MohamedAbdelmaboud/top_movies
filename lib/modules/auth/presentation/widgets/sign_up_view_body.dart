@@ -3,6 +3,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:gap/gap.dart';
 
 import '../../../../core/utils/app_images.dart';
+import '../controller/sign_up_cubit/sign_up_cubit.dart';
 import 'login_now.dart';
 import 'name_field.dart';
 import 'sign_up_button.dart';
@@ -25,8 +26,8 @@ class SignUpViewBody extends HookWidget {
         horizontal: 16,
       ),
       child: Form(
-        // key: SignUpCubit.get(context).formKey,
-        // autovalidateMode: SignUpCubit.get(context).autovalidateMode,
+        key: SignUpCubit.get(context).key,
+        autovalidateMode: SignUpCubit.get(context).autovalidateMode,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

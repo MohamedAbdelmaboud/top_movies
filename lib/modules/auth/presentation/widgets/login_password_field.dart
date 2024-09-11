@@ -3,8 +3,9 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:gap/gap.dart';
 
 import '../../../../../core/utils/validator_helper.dart';
+import '../controller/bloc/sign_in_bloc/sign_in_bloc.dart';
+import 'custom_align.dart';
 import 'custom_text_form_field.dart';
-import 'login_email_field.dart';
 
 class LoginPasswordField extends HookWidget {
   const LoginPasswordField({
@@ -38,7 +39,7 @@ class LoginPasswordField extends HookWidget {
             ),
           ),
           onSaved: (value) {
-            // SignInCubit.get(context).password = value!;
+            SignInBloc.get(context).password = value!;
           },
         ),
       ],

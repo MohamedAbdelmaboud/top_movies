@@ -1,6 +1,10 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../modules/auth/domain/usecases/sign_in_use_case.dart';
+import '../../modules/auth/domain/usecases/sign_up_use_case.dart';
+import '../../modules/auth/presentation/controller/bloc/sign_in_bloc/sign_in_bloc.dart';
+import '../../modules/auth/presentation/controller/sign_up_cubit/sign_up_cubit.dart';
 import '../../modules/auth/presentation/view/login_view.dart';
 import '../../modules/auth/presentation/view/sign_up_view.dart';
 import '../../modules/movies/domain/usecases/get_cast_use_case.dart';
@@ -92,11 +96,21 @@ class AppRouter {
       ),
       GoRoute(
         path: login,
-        builder: (context, state) => const LoginView(),
+        builder: (context, state) => BlocProvider(
+          create: (context) => SignInBloc(
+            getIt<SignInUseCase>(),
+          ),
+          child: const LoginView(),
+        ),
       ),
       GoRoute(
         path: register,
-        builder: (context, state) => const SignUpView(),
+        builder: (context, state) => BlocProvider(
+          create: (context) => SignUpCubit(
+            getIt<SignUpUseCase>(),
+          ),
+          child: const SignUpView(),
+        ),
       ),
       GoRoute(
         path: home,

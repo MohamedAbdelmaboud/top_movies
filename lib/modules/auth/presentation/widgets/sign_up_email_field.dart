@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
 import '../../../../../core/utils/validator_helper.dart';
+import '../controller/sign_up_cubit/sign_up_cubit.dart';
+import 'custom_align.dart';
 import 'custom_text_form_field.dart';
-import 'login_email_field.dart';
 
 class SignUpEmailField extends StatelessWidget {
   const SignUpEmailField({
@@ -23,7 +24,7 @@ class SignUpEmailField extends StatelessWidget {
           keyboardType: TextInputType.emailAddress,
           validator: ValidatorHelper.validateEmail,
           onSaved: (value) {
-            // SignUpCubit.get(context).email = value!;
+            SignUpCubit.get(context).email = value!;
           },
         ),
       ],
