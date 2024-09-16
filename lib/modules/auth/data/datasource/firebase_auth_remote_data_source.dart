@@ -27,44 +27,52 @@ class FirebaseAuthRemoteDataSource implements BaseFirebaseAuthRemoteDataSource {
           .signInWithEmailAndPassword(email: email, password: password);
       User user = credential.user!;
       return user;
-    } on FirebaseAuthException catch (e) {
+        } on FirebaseAuthException catch (e) {
       switch (e.code) {
         case 'user-not-found':
           throw CustomAuthException(
-            errorMessageModel: const ErrorMessageModel(
-              statusMessage: 'No user found for this email.',
-            ),
+        errorMessageModel: const ErrorMessageModel(
+          statusMessage: 'No user found for this email.',
+        ),
           );
         case 'wrong-password':
           throw CustomAuthException(
-            errorMessageModel: const ErrorMessageModel(
-              statusMessage: 'Incorrect password.',
-            ),
+        errorMessageModel: const ErrorMessageModel(
+          statusMessage: 'Incorrect password.',
+        ),
           );
         case 'too-many-requests':
           throw CustomAuthException(
-            errorMessageModel: const ErrorMessageModel(
-              statusMessage: 'Too many requests. Please try again later.',
-            ),
+        errorMessageModel: const ErrorMessageModel(
+          statusMessage: 'Too many requests. Please try again later.',
+        ),
           );
         case 'user-token-expired':
           throw CustomAuthException(
-            errorMessageModel: const ErrorMessageModel(
-              statusMessage: 'User token has expired. Please log in again.',
-            ),
+        errorMessageModel: const ErrorMessageModel(
+          statusMessage: 'User token has expired. Please log in again.',
+        ),
           );
         case 'network-request-failed':
           throw CustomAuthException(
-            errorMessageModel: const ErrorMessageModel(
-              statusMessage:
-                  'No internet connection. Please check your network',
-            ),
+        errorMessageModel: const ErrorMessageModel(
+          statusMessage:
+          'No internet connection. Please check your network',
+        ),
+          );
+        case 'invalid-email':
+        case 'invalid-credential':
+        case 'INVALID_LOGIN_CREDENTIALS':
+          throw CustomAuthException(
+        errorMessageModel: const ErrorMessageModel(
+          statusMessage: 'Invalid email or password.',
+        ),
           );
         default:
           throw CustomAuthException(
-            errorMessageModel: const ErrorMessageModel(
-              statusMessage: 'An unknown error occurred.',
-            ),
+        errorMessageModel: const ErrorMessageModel(
+          statusMessage: 'An unknown error occurred.',
+        ),
           );
       }
     } catch (e) {

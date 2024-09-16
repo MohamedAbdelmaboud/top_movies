@@ -22,83 +22,79 @@ import '../../modules/movies/domain/usecases/get_upcoming_movies_use_case.dart';
 final getIt = GetIt.instance;
 
 void setup() {
-  getIt.registerSingleton<Dio>(Dio());
-  getIt.registerSingleton<BaseRemoteDataSource>(
-      MovieRemoteDataSource(dio: getIt<Dio>()));
-  getIt.registerSingleton<MovieRepository>(
-    MovieRepositoryImpl(
+  _registerNetwork();
+  _registerMovieModule();
+  _registerAuthModule();
+}
+
+void _registerNetwork() {
+  getIt.registerLazySingleton<Dio>(() => Dio());
+}
+
+void _registerMovieModule() {
+  // Register Movie Data Source
+  getIt.registerLazySingleton<BaseRemoteDataSource>(
+      () => MovieRemoteDataSource(dio: getIt<Dio>()));
+  
+  // Register Movie Repository
+  getIt.registerLazySingleton<MovieRepository>(
+    () => MovieRepositoryImpl(
       remoteDataSource: getIt<BaseRemoteDataSource>(),
     ),
   );
-  getIt.registerSingleton<GetNowPlayingMoviesUseCase>(
-    GetNowPlayingMoviesUseCase(
-      movieRepository: getIt<MovieRepository>(),
-    ),
-  );
-  // register other use cases here
-  getIt.registerSingleton<GetPopularMoviesUseCase>(
-    GetPopularMoviesUseCase(
-      movieRepository: getIt<MovieRepository>(),
-    ),
-  );
-  getIt.registerSingleton<GetTopRatedMoviesUseCase>(
-    GetTopRatedMoviesUseCase(
-      movieRepository: getIt<MovieRepository>(),
-    ),
-  );
-  getIt.registerSingleton<GetUpcomingMoviesUseCase>(
-    GetUpcomingMoviesUseCase(
-      movieRepository: getIt<MovieRepository>(),
-    ),
-  );
-  getIt.registerSingleton<GetRecommendationMoviesUseCase>(
-    GetRecommendationMoviesUseCase(
-      movieRepository: getIt<MovieRepository>(),
-    ),
-  );
-  getIt.registerSingleton<GetMovieDetailsUseCase>(
-    GetMovieDetailsUseCase(
-      movieRepository: getIt<MovieRepository>(),
-    ),
-  );
-  // get cast
-  getIt.registerSingleton<GetCastUseCase>(
-    GetCastUseCase(
-      movieRepository: getIt<MovieRepository>(),
-    ),
-  );
-  // register saerch
-  getIt.registerSingleton<GetSearchMoviesUseCase>(
-    GetSearchMoviesUseCase(
-      movieRepository: getIt<MovieRepository>(),
-    ),
-  );
-  //GetTrailerUseCase
-  getIt.registerSingleton<GetTrailerUseCase>(
-    GetTrailerUseCase(
-      movieRepository: getIt<MovieRepository>(),
-    ),
-  );
-  // authntication ************* ♥
 
-  //sign in
-  //sign up
-  getIt.registerSingleton<BaseFirebaseAuthRemoteDataSource>(
-    FirebaseAuthRemoteDataSource(),
+  // Register each Movie-related use case
+  getIt.registerLazySingleton<GetNowPlayingMoviesUseCase>(
+    () => GetNowPlayingMoviesUseCase(movieRepository: getIt<MovieRepository>()),
   );
-  getIt.registerSingleton<AuthRepo>(
-    AuthRepoImpl(
+  getIt.registerLazySingleton<GetPopularMoviesUseCase>(
+    () => GetPopularMoviesUseCase(movieRepository: getIt<MovieRepository>()),
+  );
+  getIt.registerLazySingleton<GetTopRatedMoviesUseCase>(
+    () => GetTopRatedMoviesUseCase(movieRepository: getIt<MovieRepository>()),
+  );
+  getIt.registerLazySingleton<GetUpcomingMoviesUseCase>(
+    () => GetUpcomingMoviesUseCase(movieRepository: getIt<MovieRepository>()),
+  );
+  getIt.registerLazySingleton<GetRecommendationMoviesUseCase>(
+    () => GetRecommendationMoviesUseCase(movieRepository: getIt<MovieRepository>()),
+  );
+  getIt.registerLazySingleton<GetMovieDetailsUseCase>(
+    () => GetMovieDetailsUseCase(movieRepository: getIt<MovieRepository>()),
+  );
+  getIt.registerLazySingleton<GetCastUseCase>(
+    () => GetCastUseCase(movieRepository: getIt<MovieRepository>()),
+  );
+  getIt.registerLazySingleton<GetSearchMoviesUseCase>(
+    () => GetSearchMoviesUseCase(movieRepository: getIt<MovieRepository>()),
+  );
+  getIt.registerLazySingleton<GetTrailerUseCase>(
+    () => GetTrailerUseCase(movieRepository: getIt<MovieRepository>()),
+  );
+}
+
+void _registerAuthModule() {
+  // Register Auth Data Source
+  getIt.registerLazySingleton<BaseFirebaseAuthRemoteDataSource>(
+    () => FirebaseAuthRemoteDataSource(),
+  );
+  
+  // Register Auth Repository
+  getIt.registerLazySingleton<AuthRepo>(
+    () => AuthRepoImpl(
       baseFirebaseAuthRemoteDataSource:
           getIt<BaseFirebaseAuthRemoteDataSource>(),
     ),
   );
-  getIt.registerSingleton<SignInUseCase>(
-    SignInUseCase(
+  
+  // Register Auth Use Cases
+  getIt.registerLazySingleton<SignInUseCase>(
+    () => SignInUseCase(
       authRepo: getIt<AuthRepo>(),
     ),
   );
-  getIt.registerSingleton<SignUpUseCase>(
-    SignUpUseCase(
+  getIt.registerLazySingleton<SignUpUseCase>(
+    () => SignUpUseCase(
       authRepo: getIt<AuthRepo>(),
     ),
   );
