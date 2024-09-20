@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../core/utils/app_constance.dart';
+import '../../../../core/utils/api_constance.dart';
 import '../../domain/entites/movie_details.dart';
 
 class MovieDetailsImageCover extends StatelessWidget {

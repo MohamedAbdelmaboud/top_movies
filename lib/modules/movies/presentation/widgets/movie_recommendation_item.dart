@@ -1,4 +1,4 @@
-import '../../../../core/utils/app_constance.dart';
+import '../../../../core/utils/api_constance.dart';
 import '../../domain/entites/recommendation.dart';
 import 'package:animate_do/animate_do.dart';
 import 'package:cached_network_image/cached_network_image.dart';

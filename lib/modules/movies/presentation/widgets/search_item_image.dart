@@ -1,4 +1,4 @@
-import '../../../../core/utils/app_constance.dart';
+import '../../../../core/utils/api_constance.dart';
 import '../../domain/entites/movie.dart';
 import 'movie_loading_shimmer.dart';
 import 'package:cached_network_image/cached_network_image.dart';

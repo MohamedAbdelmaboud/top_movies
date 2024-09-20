@@ -2,7 +2,7 @@ import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
 
 import '../../../../core/error/failures.dart';
-import '../../../../core/utils/app_constance.dart';
+import '../../../../core/utils/api_constance.dart';
 import '../../domain/entites/cast.dart';
 import '../../domain/entites/trailer.dart';
 import '../models/cast_model.dart';

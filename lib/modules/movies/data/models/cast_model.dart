@@ -12,7 +12,8 @@ class CastModel extends Cast {
       name: json['name'],
       character: json['character'],
       profilePath: json['profile_path'] ??
-          '/tEXsLuN0w1aaosb4kzf5DwT7rok.jpg', //TODO: change this
+          '/tEXsLuN0w1aaosb4kzf5DwT7rok.jpg', //TODO: change this to a default image
+    
     );
   }
 
